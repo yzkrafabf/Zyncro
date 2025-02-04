@@ -4,7 +4,6 @@ body {
   color: white;
 }
 
-#encabezado{
-  width: 80%
-
+nav ul li{
+  float: left;
 }
