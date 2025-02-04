@@ -4,6 +4,11 @@ body {
   color: white;
 }
 
+nav{
+  background: gray;
+  height: 50px;
+}
+
 nav ul li{
   float: left;
   list-style: none;
