@@ -9,3 +9,7 @@ nav ul li{
   list-style: none;
   margin: 10px;
 }
+
+.clearfix{
+  clear: both;
+}
