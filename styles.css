@@ -101,32 +101,21 @@ nav ul .zyncro-img, nav ul .examen-img, nav ul .temario-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Permite que los elementos se acomoden si la pantalla es pequeña */
-  gap: 10px; /* Espaciado entre elementos */
+  flex-wrap: wrap;
+  gap: 15px;
   list-style: none;
   padding: 20px;
   background: black;
-  color: white;
-}
-
-.piedepagina li {
-  display: flex;
-  align-items: center;
 }
 
 .piedepagina img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px; /* Espacio entre el icono y el texto */
+  height: 40px; /* Ajusta el tamaño de las imágenes según sea necesario */
+  width: auto;
+  transition: transform 0.2s ease-in-out;
 }
 
-.piedepagina a {
-  color: white;
-  text-decoration: none;
-}
-
-.piedepagina a:hover {
-  text-decoration: underline;
+.piedepagina img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
 }
 
 .clearfix {
