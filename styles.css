@@ -29,14 +29,14 @@ nav ul li {
 
 nav ul .logo-container {
   display: flex;
-  flex-direction: row; /* Asegura que la imagen y el texto estén en línea */
+  flex-direction: row; /* Asegura que la imagen esté a la izquierda */
   align-items: center; /* Alinea verticalmente */
   gap: 5px; /* Espacio entre la imagen y el texto */
 }
 
 nav ul .logo-container img {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 nav ul .logo-text {
@@ -51,7 +51,6 @@ nav ul .logo-text h6 {
   padding: 0;
   line-height: 0.9;
 }
-
 
 .clearfix {
   clear: both;
