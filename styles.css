@@ -29,17 +29,29 @@ nav ul li {
 
 nav ul .logo-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-direction: row; /* Asegura que la imagen y el texto estén en línea */
+  align-items: center; /* Alinea verticalmente */
+  gap: 5px; /* Espacio entre la imagen y el texto */
 }
 
-nav ul .logo-container p,
-nav ul .logo-container h6 {
-  margin: 0; /* Elimina cualquier margen superior e inferior */
-  padding: 0; /* Elimina cualquier relleno interno */
-  line-height: 1; /* Ajusta el espacio entre líneas */
+nav ul .logo-container img {
+  width: 20px;
+  height: 20px;
 }
+
+nav ul .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+nav ul .logo-text p,
+nav ul .logo-text h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 0.9;
+}
+
 
 .clearfix {
   clear: both;
