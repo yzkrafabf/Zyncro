@@ -37,7 +37,6 @@ nav ul .logo-container {
 nav ul .logo-container img {
   max-width: 100%; /* Mantiene el tamaño proporcional */
   height: auto; /* Ajusta automáticamente la altura */
-  border-radius: 0; /* Elimina el redondeo */
 }
 
 .clearfix {
