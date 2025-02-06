@@ -11,7 +11,7 @@ nav {
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px; /* 20px de separación en la parte superior */
 }
 
 nav ul {
@@ -37,6 +37,7 @@ nav ul .logo-container {
 nav ul .logo-container img {
   max-width: 100%; /* Mantiene el tamaño proporcional */
   height: auto; /* Ajusta automáticamente la altura */
+  border-radius: 0; /* Elimina el redondeo */
 }
 
 .clearfix {
