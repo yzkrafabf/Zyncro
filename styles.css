@@ -44,11 +44,19 @@ nav ul .logo-container img {
   border-radius: 0; /* Elimina el redondeo */
 }
 
-/* Para asegurar que las imágenes no sean demasiado grandes y tengan la misma altura proporcional */
+/* Para asegurar que las imágenes de los botones no sean demasiado grandes */
 nav ul .nav-img {
   max-height: 40px; /* Ajusta la altura máxima de las imágenes de los botones a 40px */
   width: auto; /* Mantiene la proporción original de la imagen */
   object-fit: contain; /* Mantiene la proporción de la imagen */
+}
+
+/* Ajuste para las imágenes de zyncro, examen y temario */
+nav ul .zyncro-img, nav ul .examen-img, nav ul .temario-img {
+  height: 40px; /* Igualar todas a 40px de altura */
+  width: auto; /* Mantiene la proporción original */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+  margin-top: 10px; /* Espacio de 10px desde la parte superior */
 }
 
 .niveles {
