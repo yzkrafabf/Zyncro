@@ -46,7 +46,7 @@ nav ul .logo-container img {
 
 /* Para asegurar que las imágenes no sean demasiado grandes y tengan la misma altura proporcional */
 nav ul .nav-img {
-  max-height: 70px; /* La altura máxima de las imágenes será la misma que la del logo */
+  max-height: 40px; /* Ajusta la altura máxima de las imágenes de los botones a 40px */
   width: auto; /* Mantiene la proporción original de la imagen */
   object-fit: contain; /* Mantiene la proporción de la imagen */
 }
