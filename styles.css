@@ -7,10 +7,27 @@ body {
 nav{
   background: gray;
   height: 50px;
-  display: flex; /* Activa Flexbox */
-  justify-content: space-between; /* Distribuye el espacio entre los apartados */
-  align-items: center; /* Centra verticalmente los elementos */
-  padding: 0 10px;
+}
+
+nav .seccion {
+  flex: 1; /* Cada sección ocupa el mismo espacio */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  color: white; /* Color del texto */
+  font-family: Arial, Helvetica, sans-serif; /* Fuente del texto */
+}
+
+nav .seccion.primera {
+  background: gray; /* Fondo gris para la primera sección */
+}
+
+nav .seccion.segunda {
+  background: black; /* Fondo negro para la segunda sección */
+}
+
+nav .seccion.tercera {
+  background: gray; /* Fondo gris para la tercera sección */
 }
 
 nav ul li{
