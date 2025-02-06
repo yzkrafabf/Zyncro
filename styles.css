@@ -43,28 +43,45 @@ nav ul .logo-container img {
   border-radius: 0; /* Elimina el redondeo */
 }
 
-.clearfix {
-  clear: both;
-}
-
 .niveles {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si no caben */
-  justify-content: space-around; /* Espacio entre los elementos */
+  justify-content: center; /* Alinea todos los niveles horizontalmente en el centro */
+  gap: 20px; /* Espacio entre los niveles */
 }
 
-.niveles h2, .niveles img, .niveles button {
+.nivel {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos dentro de cada nivel de arriba a abajo */
+  align-items: center; /* Centra el contenido dentro de cada nivel */
   text-align: center;
-  margin: 10px;
 }
 
-.niveles img {
+.nivel img {
   width: 200px;
   height: 200px;
 }
 
-.niveles button {
+.nivel button {
   display: block;
   margin-top: 10px;
 }
+
+/* Opcional, para diferenciar visualmente cada nivel con colores */
+.nivel1 {
+  background-color: #f0f0f0; /* Color de fondo para Nivel 1 */
+}
+
+.nivel2 {
+  background-color: #e0e0e0; /* Color de fondo para Nivel 2 */
+}
+
+.nivel3 {
+  background-color: #d0d0d0; /* Color de fondo para Nivel 3 */
+}
+
+
+.clearfix {
+  clear: both;
+}
+
 
