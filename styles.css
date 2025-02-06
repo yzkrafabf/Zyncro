@@ -38,8 +38,8 @@ nav ul .logo-container {
 
 /* Estilo del logo, que ahora tendrá la misma altura que la barra */
 nav ul .logo-container img {
-  height: 100%; /* Hace que la imagen tenga la misma altura que la barra de navegación */
-  width: auto; /* Mantiene la proporción original */
+  height: 70px; /* Ajusta la altura del logo a 70px, igual que la barra de navegación */
+  width: auto; /* Mantiene la proporción original de la imagen */
   border-radius: 0; /* Elimina el redondeo */
 }
 
