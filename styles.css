@@ -46,3 +46,25 @@ nav ul .logo-container img {
 .clearfix {
   clear: both;
 }
+
+.niveles {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si no caben */
+  justify-content: space-around; /* Espacio entre los elementos */
+}
+
+.niveles h2, .niveles img, .niveles button {
+  text-align: center;
+  margin: 10px;
+}
+
+.niveles img {
+  width: 200px;
+  height: 200px;
+}
+
+.niveles button {
+  display: block;
+  margin-top: 10px;
+}
+
