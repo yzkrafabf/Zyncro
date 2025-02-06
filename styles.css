@@ -33,11 +33,11 @@ nav ul .logo-container {
   align-items: center;
 }
 
-/* Estilo del logo */
+/* Estilo del logo, ahora mantiene proporciones originales */
 nav ul .logo-container img {
-  width: 35px; /* Tamaño del logo */
-  height: 35px;
-  border-radius: 50%; /* Esquinas redondeadas */
+  max-width: 100%; /* Mantiene el tamaño proporcional */
+  height: auto; /* Ajusta automáticamente la altura */
+  border-radius: 0; /* Elimina el redondeo */
 }
 
 .clearfix {
