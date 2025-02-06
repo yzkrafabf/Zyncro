@@ -7,6 +7,10 @@ body {
 nav{
   background: gray;
   height: 50px;
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Distribuye el espacio entre los apartados */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 0 10px;
 }
 
 nav ul li{
