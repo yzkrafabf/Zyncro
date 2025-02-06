@@ -27,30 +27,17 @@ nav ul li {
   line-height: 30px;
 }
 
+/* Contenedor del logo */
 nav ul .logo-container {
   display: flex;
-  flex-direction: row; /* Asegura que la imagen esté a la izquierda */
-  align-items: center; /* Alinea verticalmente */
-  gap: 5px; /* Espacio entre la imagen y el texto */
+  align-items: center;
 }
 
+/* Estilo del logo */
 nav ul .logo-container img {
-  width: 35px;
+  width: 35px; /* Tamaño del logo */
   height: 35px;
-  border-radius: 50%; /* Hace que la imagen sea completamente redonda */
-}
-
-nav ul .logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-nav ul .logo-text p,
-nav ul .logo-text h6 {
-  margin: 0;
-  padding: 0;
-  line-height: 0.9;
+  border-radius: 50%; /* Esquinas redondeadas */
 }
 
 .clearfix {
