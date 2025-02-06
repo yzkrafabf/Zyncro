@@ -69,14 +69,17 @@ nav ul .logo-container img {
 /* Opcional, para diferenciar visualmente cada nivel con colores */
 .nivel1 {
   background-color: black; /* Color de fondo para Nivel 1 */
+  color: white; /* Cambia el texto a blanco para que se vea sobre el fondo negro */
 }
 
 .nivel2 {
   background-color: black; /* Color de fondo para Nivel 2 */
+  color: white; /* Cambia el texto a blanco para que se vea sobre el fondo negro */
 }
 
 .nivel3 {
   background-color: black; /* Color de fondo para Nivel 3 */
+  color: white; /* Cambia el texto a blanco para que se vea sobre el fondo negro */
 }
 
 .clearfix {
