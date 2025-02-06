@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-  background: black; /* Cambié el color de fondo de gris a negro */
+  background: black; /* Barra de navegación de color negro */
   height: 70px; /* Altura de la barra de navegación */
   display: flex;
   align-items: center;
@@ -44,9 +44,9 @@ nav ul .logo-container img {
   border-radius: 0; /* Elimina el redondeo */
 }
 
-/* Para asegurar que las imágenes no sean demasiado grandes y tengan la misma altura */
+/* Para asegurar que las imágenes no sean demasiado grandes y tengan la misma altura proporcional */
 nav ul .nav-img {
-  height: 70px; /* Ajusta la altura a 70px, igual que el logo */
+  max-height: 70px; /* La altura máxima de las imágenes será la misma que la del logo */
   width: auto; /* Mantiene la proporción original de la imagen */
   object-fit: contain; /* Mantiene la proporción de la imagen */
 }
