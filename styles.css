@@ -44,10 +44,10 @@ nav ul .logo-container img {
   border-radius: 0; /* Elimina el redondeo */
 }
 
-/* Para asegurar que las imágenes no sean demasiado grandes */
+/* Para asegurar que las imágenes no sean demasiado grandes y tengan la misma altura */
 nav ul .nav-img {
-  width: 40px; /* Ajusta el tamaño de las imágenes */
-  height: 40px; /* Ajusta el tamaño de las imágenes */
+  height: 70px; /* Ajusta la altura a 70px, igual que el logo */
+  width: auto; /* Mantiene la proporción original de la imagen */
   object-fit: contain; /* Mantiene la proporción de la imagen */
 }
 
