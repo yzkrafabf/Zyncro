@@ -32,11 +32,13 @@ nav ul .logo-container {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 2px; /* Reduce el espacio entre los elementos */
 }
 
-nav ul .logo-container img {
-  width: 20px;
-  height: 20px;
+nav ul .logo-container p,
+nav ul .logo-container h6 {
+  margin: 0; /* Elimina márgenes extra */
+  line-height: 1.1; /* Reduce el espacio vertical */
 }
 
 .clearfix {
