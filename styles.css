@@ -97,6 +97,38 @@ nav ul .zyncro-img, nav ul .examen-img, nav ul .temario-img {
   color: white; /* Cambia el texto a blanco para que se vea sobre el fondo negro */
 }
 
+.piedepagina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden si la pantalla es pequeña */
+  gap: 10px; /* Espaciado entre elementos */
+  list-style: none;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
+.piedepagina li {
+  display: flex;
+  align-items: center;
+}
+
+.piedepagina img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.piedepagina a {
+  color: white;
+  text-decoration: none;
+}
+
+.piedepagina a:hover {
+  text-decoration: underline;
+}
+
 .clearfix {
   clear: both;
 }
