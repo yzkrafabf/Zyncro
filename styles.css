@@ -29,15 +29,14 @@ nav ul li {
   line-height: 30px;
 }
 
-/* Contenedor del logo */
 nav ul .logo-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Asegura que el logo esté pegado a la izquierda */
+  justify-content: flex-start; /* Alinea el logo totalmente a la izquierda */
   height: 100%; /* Asegura que el logo ocupe toda la altura de la barra */
+  margin-right: auto; /* Esto asegura que se pegue a la izquierda */
 }
 
-/* Estilo del logo, que ahora tendrá la misma altura que la barra */
 nav ul .logo-container img {
   height: 70px; /* Ajusta la altura del logo a 70px, igual que la barra de navegación */
   width: auto; /* Mantiene la proporción original de la imagen */
