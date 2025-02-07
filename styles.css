@@ -12,10 +12,6 @@ body {
 }
 
 /* Estilos para la barra de navegación */
-nav {
-  margin-top: 20px; /* Separa la barra de navegación 20px desde arriba */
-}
-
 nav ul {
   display: flex; /* Alinea los elementos horizontalmente */
   align-items: center; /* Centra verticalmente los elementos */
@@ -30,7 +26,7 @@ nav img {
   width: auto; /* Ancho automático para mantener la proporción */
 }
 
-/* Estilo para el logo de Zyncro */
-nav .logo-container {
-  margin-right: auto; /* Empuja el logo a la izquierda */
+/* Estilo para el contenedor de Temario */
+nav ul li:last-child {
+  margin-left: auto; /* Empuja Temario al lado derecho */
 }
