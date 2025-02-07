@@ -15,8 +15,8 @@ nav {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-top: 20px;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -32,20 +32,29 @@ nav ul li {
   margin: 0 15px;
 }
 
-/* Estilos del logo y contenedor de imágenes en la barra de navegación */
-.logo-container, .nav-img-container {
+/* Estilos del logo de Zyncro */
+nav ul .logo-container {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
-.logo-container img, .nav-img {
+nav ul .logo-container img {
+  height: 70px;
+  width: auto;
+}
+
+/* Contenedor de imágenes de Examen y Temario */
+nav ul .nav-img-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 70px;
+}
+
+nav ul .nav-img {
   height: 70px;
   width: auto;
   object-fit: contain;
-}
-
-.nav-img-container {
-  margin-left: 70px;
 }
 
 /* Sección de niveles */
@@ -64,7 +73,9 @@ nav ul li {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 130px;
+  flex-basis: auto;
+  height: 50px; /* Reducido a 1/3 de su tamaño original */
+  width: auto;
 }
 
 .nivel img {
