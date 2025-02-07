@@ -95,9 +95,9 @@ nav ul li {
 .piedepagina {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
-  gap: 15px; /* Espaciado entre los elementos */
+  justify-content: center; /* Centra las imágenes en el contenedor */
+  flex-wrap: nowrap; /* Asegura que las imágenes no se envuelvan en varias líneas */
+  gap: 0; /* Elimina el espacio entre las imágenes */
   list-style: none;
   padding: 20px;
   background: black;
@@ -109,6 +109,8 @@ nav ul li {
   height: 70px; /* Tamaño uniforme */
   width: auto;
   transition: transform 0.2s ease-in-out; /* Efecto de animación */
+  margin: 0; /* Elimina el margen entre las imágenes */
+  padding: 0; /* Elimina el relleno entre las imágenes */
 }
 
 /* Efecto hover: Aumenta la imagen un poco al pasar el cursor */
@@ -116,7 +118,3 @@ nav ul li {
   transform: scale(1.1);
 }
 
-/* Clase para limpiar flotantes (no se usa en este código pero es útil) */
-.clearfix {
-  clear: both;
-}
