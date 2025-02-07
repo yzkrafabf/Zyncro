@@ -26,7 +26,7 @@ nav img {
   width: auto; /* Ancho automático para mantener la proporción */
 }
 
-/* Estilo para el contenedor de Temario */
-nav ul li:last-child {
-  margin-left: auto; /* Empuja Temario al lado derecho */
+/* Estilo para el contenedor de Examen y Temario */
+nav ul li:nth-child(2) { /* Selecciona el segundo <li> (Examen) */
+  margin-left: auto; /* Empuja Examen y Temario hacia la derecha */
 }
