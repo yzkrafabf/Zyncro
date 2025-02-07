@@ -11,3 +11,9 @@ html, body {
 body {
   background-color: black;
 }
+
+/* Estilos para las imágenes de la barra de navegación */
+nav img {
+  height: 20px; /* Altura fija de 20px */
+  width: auto; /* Ancho automático para mantener la proporción */
+}
