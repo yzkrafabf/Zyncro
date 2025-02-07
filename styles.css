@@ -91,11 +91,12 @@ nav ul .nav-img-container {
   flex-direction: column; /* Alinea el contenido verticalmente */
   align-items: center; /* Centra los elementos */
   text-align: center;
-  flex-basis: 30%; /* Asegura que los niveles no se estiren demasiado en pantallas grandes */
+  flex-basis: auto; /* Ajusta el ancho automáticamente */
+  height: 200px; /* Altura fija de 200px para los niveles */
 }
 
 .nivel img {
-  height: 200px; /* Mantiene la altura fija de 200px */
+  height: 100%; /* La imagen ocupa toda la altura del contenedor */
   width: auto; /* El ancho se ajusta automáticamente para mantener la proporción */
 }
 
@@ -137,7 +138,7 @@ img {
 
 /* Estilos para los botones "Empezar" */
 button {
-  height: 40px;  /* Aumenta la altura para mejorar la visibilidad del texto */
+  height: 20px;  /* Altura de 20px para los botones "Empezar" */
   width: auto;  /* Mantiene el ancho automático */
   padding: 0 20px; /* Ajusta el relleno solo en los laterales */
   background-color: #ff7f50; /* Fondo de color naranja */
@@ -148,7 +149,7 @@ button {
   margin-bottom: 20px; /* Separa los botones 20px de los niveles */
   box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño del botón */
   display: inline-block;  /* Hace que el botón se ajuste al contenido */
-  line-height: 40px;  /* Establece la altura de la línea para alinear el texto verticalmente */
+  line-height: 20px;  /* Establece la altura de la línea para alinear el texto verticalmente */
   text-align: center;  /* Centra el texto */
 }
 
