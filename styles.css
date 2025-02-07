@@ -1,3 +1,16 @@
+/* Elimina márgenes y rellenos predeterminados, y asegura que todo esté pegado a los bordes */
+html, body {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+  width: 100%; /* Ocupa el 100% del ancho de la ventana */
+  height: 100%; /* Ocupa el 100% de la altura de la ventana */
+}
+
+/* Fondo negro para toda la página */
+body {
+  background-color: black;
+}
+
 /* Estilos para la barra de navegación */
 nav ul {
   display: flex; /* Alinea los elementos horizontalmente */
