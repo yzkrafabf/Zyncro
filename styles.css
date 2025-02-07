@@ -136,6 +136,7 @@ button {
   border: none;  /* Sin borde */
   cursor: pointer;  /* Cambia el cursor cuando pasa por encima */
   font-size: 14px;  /* Ajusta el tamaño de la fuente */
+  margin-bottom: 20px; /* Separa los botones 20px de los niveles */
 }
 
 /* Estilo para el hover de los botones "Empezar" */
