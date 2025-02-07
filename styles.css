@@ -78,6 +78,7 @@ nav ul li {
   justify-content: center; /* Centra los niveles horizontalmente */
   gap: 20px; /* Espaciado entre los niveles */
   margin-top: 70px; /* Añade 70px de margen superior para separar de las imágenes del Zyncro, Examen y Temario */
+  margin-bottom: 70px; /* Añade 70px de margen inferior para separar de las imágenes del pie de página */
 }
 
 /* Estilos individuales de cada nivel */
