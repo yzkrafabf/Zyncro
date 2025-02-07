@@ -95,8 +95,8 @@ nav ul .nav-img-container {
 }
 
 .nivel img {
-  width: 200px;
-  height: 200px;
+  height: 200px; /* Mantiene la altura fija de 200px */
+  width: auto; /* El ancho se ajusta automáticamente para mantener la proporción */
 }
 
 /* Estilos del pie de página */
