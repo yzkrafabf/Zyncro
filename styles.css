@@ -121,7 +121,7 @@ nav ul .nav-img-container {
   align-items: center;
   justify-content: center; /* Centra las imágenes en el contenedor */
   flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias líneas si es necesario */
-  gap: 20px; /* Espaciado entre las imágenes */
+  gap: 0; /* Elimina el espaciado entre las imágenes */
   list-style: none;
   padding: 20px;
   background: black;
