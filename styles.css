@@ -14,26 +14,20 @@ body {
 /* Estilos para la barra de navegación */
 nav ul {
   display: flex; /* Alinea los elementos horizontalmente */
-  align-items: center; /* Centra verticalmente los elementos */
   list-style-type: none; /* Elimina los puntos de la lista */
   margin: 0; /* Elimina el margen predeterminado */
   padding: 0; /* Elimina el relleno predeterminado */
   width: 100%; /* Ocupa el 100% del ancho disponible */
 }
 
+/* Estilos para los elementos de la lista (li) */
+nav ul li {
+  flex: 1; /* Cada <li> ocupa el mismo espacio */
+}
+
 /* Estilos para las imágenes de la barra de navegación */
 nav img {
-  height: 20px; /* Altura fija de 20px */
-  width: auto; /* Ancho automático para mantener la proporción */
-}
-
-/* Estilo para el contenedor de Zyncro */
-nav ul li:first-child {
-  flex: 0 0 20%; /* Zyncro ocupa el 20% del ancho */
-}
-
-/* Estilo para el contenedor de Examen y Temario */
-nav ul li:nth-child(2),
-nav ul li:nth-child(3) {
-  flex: 0 0 37.5%; /* Examen y Temario ocupan 37.5% cada uno (75% en total) */
+  height: 70px; /* Altura fija de 70px */
+  width: 100%; /* Ocupa el 100% del ancho del <li> */
+  display: block; /* Elimina espacios adicionales debajo de las imágenes */
 }
