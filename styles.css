@@ -17,6 +17,7 @@ nav {
   align-items: center;  /* Centra verticalmente los elementos dentro de la barra */
   padding: 0;  /* Elimina cualquier relleno */
   margin-top: 40px;  /* Mueve toda la barra de navegación 40px hacia abajo */
+  justify-content: space-between; /* Distribuye los elementos entre el inicio y el final */
 }
 
 nav ul {
@@ -49,7 +50,13 @@ nav ul .logo-container img {
   padding: 0;  /* Elimina cualquier relleno */
 }
 
-/* Estilos para las imágenes de "Examen" y "Temario" */
+/* Contenedor para las imágenes de "Examen" y "Temario" alineado a la derecha */
+nav ul .nav-img-container {
+  display: flex;
+  justify-content: flex-end; /* Alinea las imágenes a la derecha */
+  margin-left: auto;  /* Empuja el contenido al extremo derecho */
+}
+
 nav ul .nav-img {
   height: 70px;  /* Altura fija de 70px */
   width: auto;  /* El ancho se ajusta automáticamente para mantener la proporción */
