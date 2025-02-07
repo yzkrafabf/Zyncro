@@ -100,6 +100,20 @@ nav ul .nav-img-container {
   width: auto; /* El ancho se ajusta automáticamente para mantener la proporción */
 }
 
+/* Nueva sección para los botones "Empezar" después de los niveles */
+.empezar-seccion {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espaciado entre los botones */
+  margin-top: 50px; /* Añade un margen superior de 50px */
+  margin-bottom: 50px; /* Añade un margen inferior de 50px */
+}
+
+.empezar-seccion img {
+  height: 50px;  /* Tamaño uniforme de las imágenes */
+  width: auto;
+}
+
 /* Estilos del pie de página */
 .piedepagina {
   display: flex;
