@@ -68,7 +68,7 @@ nav ul .nav-img {
 
 /* Asegura que las imágenes de "Examen" y "Temario" estén separadas de la imagen de "Zyncro" */
 nav ul .nav-img-container {
-  margin-left: 210px; /* Separa las imágenes de Examen y Temario 210px de Zyncro */
+  margin-left: 70px; /* Separa las imágenes de Examen y Temario 70px de Zyncro */
 }
 
 /* Sección de niveles */
