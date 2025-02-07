@@ -12,13 +12,14 @@ body {
   background-color: black;
 }
 
+/* Estilos para la barra de navegación */
+nav {
+  display: flex; /* Alinea los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
 /* Estilos para las imágenes de la barra de navegación */
 nav img {
   height: 20px; /* Altura fija de 20px */
   width: auto; /* Ancho automático para mantener la proporción */
-}
-
-/* Estilo para el logo de Zyncro */
-nav .logo-container {
-  margin-right: auto; /* Empuja el logo a la izquierda */
 }
