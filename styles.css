@@ -80,7 +80,7 @@ nav ul li a {
 }
 
 .piedepagina li {
-  margin-right: 20px; /* Espaciado entre elementos de la lista */
+  margin-right: 0; /* Elimina el espacio entre elementos de la lista */
 }
 
 .piedepagina li a {
@@ -88,6 +88,7 @@ nav ul li a {
 }
 
 .piedepagina img {
-  width: 30px; /* Ancho de las imágenes */
-  height: auto; /* Altura automática para mantener la proporción */
+  height: 20px; /* Altura fija de 20px */
+  width: auto; /* Ancho automático para mantener la proporción */
+  display: block; /* Elimina el espacio adicional debajo de las imágenes */
 }
