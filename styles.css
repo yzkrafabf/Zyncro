@@ -66,10 +66,9 @@ nav ul .nav-img {
   padding: 0;  /* Elimina cualquier relleno */
 }
 
-/* También puedes asegurarte de que los elementos de la lista (li) no tengan márgenes */
-nav ul li {
-  list-style: none; /* Elimina viñetas */
-  margin: 0;  /* Elimina cualquier margen */
+/* Asegura que las imágenes de "Examen" y "Temario" estén separadas de la imagen de "Zyncro" */
+nav ul .nav-img-container {
+  margin-left: 210px; /* Separa las imágenes de Examen y Temario 210px de Zyncro */
 }
 
 /* Sección de niveles */
@@ -125,4 +124,21 @@ nav ul li {
 img {
   height: 20px; /* Establece la altura a 20px para todas las imágenes */
   width: auto;  /* Mantiene el ancho automático para preservar la proporción */
+}
+
+/* Estilos para los botones "Empezar" */
+button {
+  height: 20px;  /* Altura de 20px para los botones "Empezar" */
+  width: auto;  /* Mantiene el ancho automático */
+  padding: 10px 20px; /* Ajusta el relleno para que se vean bien */
+  background-color: #ff7f50; /* Fondo de color naranja */
+  color: white;  /* Color del texto en los botones */
+  border: none;  /* Sin borde */
+  cursor: pointer;  /* Cambia el cursor cuando pasa por encima */
+  font-size: 14px;  /* Ajusta el tamaño de la fuente */
+}
+
+/* Estilo para el hover de los botones "Empezar" */
+button:hover {
+  background-color: #ff4500; /* Cambio de color al pasar el cursor */
 }
