@@ -17,3 +17,8 @@ nav img {
   height: 20px; /* Altura fija de 20px */
   width: auto; /* Ancho automático para mantener la proporción */
 }
+
+/* Estilo para el logo de Zyncro */
+nav .logo-container {
+  margin-right: auto; /* Empuja el logo a la izquierda */
+}
