@@ -1,1 +1,93 @@
+/* Estilos generales */
+body {
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+  background-color: black; /* Fondo negro */
+  color: white; /* Color de texto blanco para contrastar con el fondo negro */
+  font-family: Arial, sans-serif; /* Fuente predeterminada */
+}
 
+/* Estilos para la barra de navegación */
+nav {
+  background-color: #333; /* Fondo oscuro para la barra de navegación */
+  padding: 10px; /* Espaciado interno */
+}
+
+nav ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Usa flexbox para alinear los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+nav ul li {
+  margin-right: 20px; /* Espaciado entre elementos de la lista */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Estilos para las imágenes en la barra de navegación */
+.nav-img {
+  width: 50px; /* Ancho de las imágenes */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilos para el logo de Zyncro */
+.zyncro-img {
+  width: 100px; /* Ancho del logo */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilos para la sección de niveles */
+.niveles {
+  display: flex; /* Usa flexbox para alinear los niveles */
+  justify-content: space-around; /* Distribuye el espacio entre los niveles */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.nivel {
+  text-align: center; /* Centra el contenido de cada nivel */
+}
+
+.nivel-img {
+  width: 150px; /* Ancho de las imágenes de los niveles */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilos para los botones "Empezar" */
+.botones-empezar {
+  display: flex; /* Usa flexbox para alinear los botones */
+  justify-content: space-around; /* Distribuye el espacio entre los botones */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.botones-empezar a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Estilos para el pie de página */
+.piedepagina {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Usa flexbox para alinear los elementos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  background-color: #333; /* Fondo oscuro para el pie de página */
+  padding: 10px; /* Espaciado interno */
+}
+
+.piedepagina li {
+  margin-right: 20px; /* Espaciado entre elementos de la lista */
+}
+
+.piedepagina li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.piedepagina img {
+  width: 30px; /* Ancho de las imágenes */
+  height: auto; /* Altura automática para mantener la proporción */
+}
