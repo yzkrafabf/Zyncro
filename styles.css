@@ -92,7 +92,8 @@ nav ul .nav-img-container {
   align-items: center; /* Centra los elementos */
   text-align: center;
   flex-basis: auto; /* Ajusta el ancho automáticamente */
-  height: 200px; /* Altura fija de 200px para los niveles */
+  height: 300px; /* Altura ajustada a 300px */
+  width: auto; /* Ancho automático */
 }
 
 .nivel img {
