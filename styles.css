@@ -16,7 +16,7 @@ nav {
   display: flex;  /* Usa flexbox para alinear los elementos en fila */
   align-items: center;  /* Centra verticalmente los elementos dentro de la barra */
   padding: 0;  /* Elimina cualquier relleno */
-  margin-top: 40px;  /* Mueve toda la barra de navegación 40px hacia abajo */
+  margin-top: 20px;  /* Mueve toda la barra de navegación 20px hacia abajo */
   justify-content: space-between; /* Distribuye los elementos entre el inicio y el final */
 }
 
