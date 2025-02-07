@@ -54,7 +54,14 @@ nav ul .nav-img {
   height: 70px;  /* Altura fija de 70px */
   width: auto;  /* El ancho se ajusta automáticamente para mantener la proporción */
   object-fit: contain;  /* Asegura que la imagen no se deforme */
-  margin-top: 0px;  /* No es necesario margen adicional */
+  margin: 0;  /* Elimina cualquier margen */
+  padding: 0;  /* Elimina cualquier relleno */
+}
+
+/* También puedes asegurarte de que los elementos de la lista (li) no tengan márgenes */
+nav ul li {
+  list-style: none; /* Elimina viñetas */
+  margin: 0;  /* Elimina cualquier margen */
 }
 
 /* Sección de niveles */
