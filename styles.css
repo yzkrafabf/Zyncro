@@ -78,6 +78,11 @@ nav ul .nav-img-container {
   gap: 20px; /* Espaciado entre los niveles */
   margin-top: 70px; /* Añade 70px de margen superior para separar de las imágenes del Zyncro, Examen y Temario */
   margin-bottom: 70px; /* Añade 70px de margen inferior para separar de las imágenes del pie de página */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  max-width: 1200px; /* Límite de ancho máximo en pantallas grandes */
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap; /* Permite que los niveles se ajusten si hay poco espacio */
 }
 
 /* Estilos individuales de cada nivel */
@@ -86,6 +91,7 @@ nav ul .nav-img-container {
   flex-direction: column; /* Alinea el contenido verticalmente */
   align-items: center; /* Centra los elementos */
   text-align: center;
+  flex-basis: 30%; /* Asegura que los niveles no se estiren demasiado en pantallas grandes */
 }
 
 .nivel img {
@@ -98,12 +104,15 @@ nav ul .nav-img-container {
   display: flex;
   align-items: center;
   justify-content: center; /* Centra las imágenes en el contenedor */
-  flex-wrap: nowrap; /* Asegura que las imágenes no se envuelvan en varias líneas */
-  gap: 0; /* Elimina el espacio entre las imágenes */
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias líneas si es necesario */
+  gap: 20px; /* Espaciado entre las imágenes */
   list-style: none;
   padding: 20px;
   background: black;
   width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+  max-width: 1200px; /* Límite de ancho máximo en pantallas grandes */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Estilos de las imágenes del pie de página */
