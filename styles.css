@@ -20,6 +20,7 @@ nav {
   justify-content: space-between; /* Distribuye los elementos entre el inicio y el final */
 }
 
+/* Asegura que los elementos dentro del ul estén bien alineados */
 nav ul {
   display: flex; /* Elementos en línea con flexbox */
   align-items: center; /* Centra los elementos */
@@ -50,11 +51,11 @@ nav ul .logo-container img {
   padding: 0;  /* Elimina cualquier relleno */
 }
 
-/* Contenedor para las imágenes de "Examen" y "Temario" alineado a la derecha */
+/* Contenedor para las imágenes de "Examen" y "Temario" alineado a la izquierda */
 nav ul .nav-img-container {
   display: flex;
-  justify-content: flex-end; /* Alinea las imágenes a la derecha */
-  margin-left: auto;  /* Empuja el contenido al extremo derecho */
+  justify-content: flex-start; /* Alinea las imágenes a la izquierda */
+  margin-right: auto;  /* Empuja el contenido hacia la izquierda */
 }
 
 nav ul .nav-img {
