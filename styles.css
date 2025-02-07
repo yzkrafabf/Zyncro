@@ -29,6 +29,11 @@ nav ul li {
   flex: 1; /* Cada <li> ocupa el mismo espacio */
 }
 
+/* Estilo específico para el contenedor de Zyncro */
+nav ul li:first-child {
+  margin-right: 20px; /* Añade 20px de separación entre Zyncro y Examen */
+}
+
 /* Estilos para las imágenes de la barra de navegación */
 nav img {
   height: 70px; /* Altura fija de 70px */
