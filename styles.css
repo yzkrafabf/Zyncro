@@ -99,7 +99,7 @@ nav ul li {
 
 /* Estilos de las imágenes del pie de página */
 .piedepagina img {
-  height: 40px; /* Tamaño uniforme */
+  height: 70px; /* Tamaño uniforme */
   width: auto;
   transition: transform 0.2s ease-in-out; /* Efecto de animación */
 }
