@@ -7,6 +7,7 @@ body {
   padding: 0; /* Elimina el relleno por defecto */
   width: 100vw; /* Asegura que el ancho sea el 100% del ancho de la ventana */
   overflow-x: hidden; /* Elimina el desbordamiento horizontal si lo hubiera */
+  box-sizing: border-box; /* Asegura que el padding y los bordes no afecten el tamaño de los elementos */
 }
 
 /* Barra de navegación */
@@ -96,8 +97,9 @@ nav ul .nav-img-container {
 }
 
 .nivel img {
-  height: 100%; /* La imagen ocupa toda la altura del contenedor */
-  width: auto; /* El ancho se ajusta automáticamente para mantener la proporción */
+  max-height: 200px; /* Altura máxima para la imagen */
+  max-width: 200px; /* Ancho máximo para la imagen */
+  object-fit: contain; /* Mantiene la proporción sin deformar */
 }
 
 /* Estilos del pie de página */
@@ -130,17 +132,9 @@ nav ul .nav-img-container {
   transform: scale(1.1);
 }
 
-/* Estilos para todas las imágenes en la página */
-img {
-  height: 20px; /* Establece la altura a 20px para todas las imágenes */
-  width: auto;  /* Mantiene el ancho automático para preservar la proporción */
-}
-
 /* Estilos para los botones "Empezar" */
 button {
-  height: 20px;  /* Altura de 20px para los botones "Empezar" */
-  width: auto;  /* Mantiene el ancho automático */
-  padding: 0 20px; /* Ajusta el relleno solo en los laterales */
+  padding: 10px 20px; /* Ajusta el relleno del botón */
   background-color: #ff7f50; /* Fondo de color naranja */
   color: white;  /* Color del texto en los botones */
   border: none;  /* Sin borde */
@@ -151,6 +145,7 @@ button {
   display: inline-block;  /* Hace que el botón se ajuste al contenido */
   line-height: 20px;  /* Establece la altura de la línea para alinear el texto verticalmente */
   text-align: center;  /* Centra el texto */
+  transition: background-color 0.2s ease-in-out; /* Transición suave */
 }
 
 /* Estilo para el hover de los botones "Empezar" */
