@@ -36,7 +36,7 @@ nav ul li:first-child {
 
 /* Estilos para las imágenes de la barra de navegación */
 nav img {
-  height: 70px; /* Altura fija de 70px */
+  height: 75px; /* Altura fija de 75px */
   width: 100%; /* Ocupa el 100% del ancho del <li> */
   display: block; /* Elimina espacios adicionales debajo de las imágenes */
 }
