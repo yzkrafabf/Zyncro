@@ -75,7 +75,7 @@ nav ul .nav-img-container {
 .niveles {
   display: flex;
   justify-content: center; /* Centra los niveles horizontalmente */
-  gap: 50px; /* Espaciado entre los niveles de 50px */
+  gap: 90px; /* Espaciado entre los niveles de 90px */
   margin-top: 70px; /* Añade 70px de margen superior para separar de las imágenes del Zyncro, Examen y Temario */
   margin-bottom: 70px; /* Añade 70px de margen inferior para separar de las imágenes del pie de página */
   width: 100%; /* Asegura que ocupe todo el ancho disponible */
@@ -137,20 +137,22 @@ img {
 
 /* Estilos para los botones "Empezar" */
 button {
-  height: 20px;  /* Altura de 20px para los botones "Empezar" */
+  height: 40px;  /* Aumenta la altura para mejorar la visibilidad del texto */
   width: auto;  /* Mantiene el ancho automático */
-  padding: 10px 20px; /* Ajusta el relleno para que se vean bien */
+  padding: 0 20px; /* Ajusta el relleno solo en los laterales */
   background-color: #ff7f50; /* Fondo de color naranja */
   color: white;  /* Color del texto en los botones */
   border: none;  /* Sin borde */
   cursor: pointer;  /* Cambia el cursor cuando pasa por encima */
   font-size: 14px;  /* Ajusta el tamaño de la fuente */
   margin-bottom: 20px; /* Separa los botones 20px de los niveles */
-  transition: transform 0.2s ease-in-out; /* Transición suave para el efecto hover */
+  box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño del botón */
+  display: inline-block;  /* Hace que el botón se ajuste al contenido */
+  line-height: 40px;  /* Establece la altura de la línea para alinear el texto verticalmente */
+  text-align: center;  /* Centra el texto */
 }
 
 /* Estilo para el hover de los botones "Empezar" */
 button:hover {
   background-color: #ff4500; /* Cambio de color al pasar el cursor */
-  transform: scale(1.1); /* Aumenta el tamaño del botón */
 }
