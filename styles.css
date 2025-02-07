@@ -146,9 +146,11 @@ button {
   cursor: pointer;  /* Cambia el cursor cuando pasa por encima */
   font-size: 14px;  /* Ajusta el tamaño de la fuente */
   margin-bottom: 20px; /* Separa los botones 20px de los niveles */
+  transition: transform 0.2s ease-in-out; /* Transición suave para el efecto hover */
 }
 
 /* Estilo para el hover de los botones "Empezar" */
 button:hover {
   background-color: #ff4500; /* Cambio de color al pasar el cursor */
+  transform: scale(1.1); /* Aumenta el tamaño del botón */
 }
