@@ -92,7 +92,7 @@ nav ul .nav-img-container {
   align-items: center; /* Centra los elementos */
   text-align: center;
   flex-basis: auto; /* Ajusta el ancho automáticamente */
-  height: 70px; /* Cambiado a 130px */
+  height: 150px; /* Cambiado a 150px */
   width: auto; /* El ancho se ajusta automáticamente */
 }
 
@@ -143,32 +143,4 @@ nav ul .nav-img-container {
 /* Efecto hover: Aumenta la imagen un poco al pasar el cursor */
 .piedepagina img:hover {
   transform: scale(1.1);
-}
-
-/* Estilos para todas las imágenes en la página */
-img {
-  height: 20px; /* Establece la altura a 20px para todas las imágenes */
-  width: auto;  /* Mantiene el ancho automático para preservar la proporción */
-}
-
-/* Estilos para los botones "Empezar" */
-button {
-  height: 20px;  /* Altura de 20px para los botones "Empezar" */
-  width: auto;  /* Mantiene el ancho automático */
-  padding: 0 20px; /* Ajusta el relleno solo en los laterales */
-  background-color: #ff7f50; /* Fondo de color naranja */
-  color: white;  /* Color del texto en los botones */
-  border: none;  /* Sin borde */
-  cursor: pointer;  /* Cambia el cursor cuando pasa por encima */
-  font-size: 14px;  /* Ajusta el tamaño de la fuente */
-  margin-bottom: 20px; /* Separa los botones 20px de los niveles */
-  box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño del botón */
-  display: inline-block;  /* Hace que el botón se ajuste al contenido */
-  line-height: 20px;  /* Establece la altura de la línea para alinear el texto verticalmente */
-  text-align: center;  /* Centra el texto */
-}
-
-/* Estilo para el hover de los botones "Empezar" */
-button:hover {
-  background-color: #ff4500; /* Cambio de color al pasar el cursor */
 }
