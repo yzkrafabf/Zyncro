@@ -1,12 +1,12 @@
 /* Configuración general de la página */
 body {
-  background: black;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  overflow-x: hidden;
+  background: black; /* Fondo negro */
+  font-family: Arial, Helvetica, sans-serif; /* Fuente general */
+  color: white; /* Color de texto blanco */
+  margin: 0; /* Elimina los márgenes por defecto */
+  padding: 0; /* Elimina el relleno por defecto */
+  width: 100vw; /* Asegura que el ancho sea el 100% del ancho de la ventana */
+  overflow-x: hidden; /* Elimina el desbordamiento horizontal si lo hubiera */
 }
 
 /* Barra de navegación */
@@ -15,6 +15,7 @@ nav {
   height: 70px;
   display: flex;
   align-items: center;
+  padding: 0;
   margin-top: 20px;
   justify-content: space-between;
 }
@@ -32,22 +33,26 @@ nav ul li {
   margin: 0 15px;
 }
 
-/* Estilos del logo de Zyncro */
 nav ul .logo-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  width: auto;
 }
 
 nav ul .logo-container img {
   height: 70px;
   width: auto;
+  margin: 0;
+  padding: 0;
 }
 
-/* Contenedor de imágenes de Examen y Temario */
 nav ul .nav-img-container {
   display: flex;
   justify-content: flex-start;
+  margin-right: auto;
   margin-left: 70px;
 }
 
@@ -55,26 +60,32 @@ nav ul .nav-img {
   height: 70px;
   width: auto;
   object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
 
 /* Sección de niveles */
 .niveles {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 70px auto;
+  gap: 10px; /* Espaciado reducido */
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 100%;
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   flex-wrap: wrap;
 }
 
+/* Estilos individuales de cada nivel */
 .nivel {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   flex-basis: auto;
-  height: 50px; /* Reducido a 1/3 de su tamaño original */
+  height: 50px; /* Tamaño reducido */
   width: auto;
 }
 
@@ -88,7 +99,8 @@ nav ul .nav-img {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .empezar-seccion img {
@@ -102,17 +114,22 @@ nav ul .nav-img {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
   padding: 20px;
   background: black;
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .piedepagina img {
   height: 70px;
   width: auto;
   transition: transform 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
 }
 
 .piedepagina img:hover {
