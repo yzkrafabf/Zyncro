@@ -31,14 +31,14 @@ nav ul li a {
 
 /* Estilos para las imágenes en la barra de navegación */
 .nav-img {
-  width: 50px; /* Ancho de las imágenes */
-  height: auto; /* Altura automática para mantener la proporción */
+  height: 20px; /* Altura fija de 20px */
+  width: auto; /* Ancho automático para mantener la proporción */
 }
 
-/* Estilos para el logo de Zyncro */
+/* Estilo específico para el logo de Zyncro */
 .zyncro-img {
-  width: 100px; /* Ancho del logo */
-  height: auto; /* Altura automática para mantener la proporción */
+  height: 20px; /* Altura fija de 20px */
+  width: auto; /* Ancho automático para mantener la proporción */
 }
 
 /* Estilos para la sección de niveles */
