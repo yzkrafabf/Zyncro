@@ -118,3 +118,8 @@ nav ul li {
   transform: scale(1.1);
 }
 
+/* Estilos para las imágenes empezar.png */
+img[src*="empezar.png"] {
+  height: 20px; /* Establece la altura a 20px */
+  width: auto;  /* Mantiene el ancho automático para preservar la proporción */
+}
