@@ -1,88 +1,94 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Declaración del tipo de documento como HTML5 -->
+<html lang="es"> <!-- Etiqueta raíz del documento, con el atributo lang para indicar que el contenido está en español -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zyncro - Inicio</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos CSS -->
+  <!-- Encabezado del documento, contiene metadatos y enlaces a recursos externos -->
+  <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+  <title>Zyncro - Inicio</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos CSS externo -->
 </head>
 
 <body>
+  <!-- Cuerpo del documento, contiene el contenido visible de la página -->
 
   <!-- Barra de Navegación (Franja negra superior) -->
   <nav>
-    <ul>
+    <ul> <!-- Lista no ordenada para los elementos de la barra de navegación -->
       <!-- Logo de Zyncro que redirige a la página de inicio -->
-      <li class="logo-container">
-        <a href="index.html">
-          <img src="img/zyncro.png" alt="Logo de Zyncro" class="zyncro-img">
+      <li class="logo-container"> <!-- Elemento de la lista que contiene el logo -->
+        <a href="index.html"> <!-- Enlace que redirige a la página de inicio -->
+          <img src="img/zyncro.png" alt="Logo de Zyncro" class="zyncro-img"> <!-- Imagen del logo -->
         </a>
       </li>
 
       <!-- Botón que enlaza al examen en Google Forms (se abre en una nueva pestaña) -->
-      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScuy_N0MJtbt88y1lflBOu5aFm9UYPouzs1WLX-4jUUQF93LA/viewform" target="_blank">
-        <img src="img/examen.png" alt="Examen de Python" class="nav-img"></a>
+      <li> <!-- Elemento de la lista que contiene el enlace al examen -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuy_N0MJtbt88y1lflBOu5aFm9UYPouzs1WLX-4jUUQF93LA/viewform" target="_blank">
+          <img src="img/examen.png" alt="Examen de Python" class="nav-img"> <!-- Imagen del botón de examen -->
+        </a>
       </li>
 
       <!-- Botón que enlaza al temario en otra pestaña -->
-      <li><a href="temario.html" target="_blank">
-        <img src="img/temario.png" alt="Temario de Python" class="nav-img"></a>
+      <li> <!-- Elemento de la lista que contiene el enlace al temario -->
+        <a href="temario.html" target="_blank">
+          <img src="img/temario.png" alt="Temario de Python" class="nav-img"> <!-- Imagen del botón de temario -->
+        </a>
       </li>
     </ul>
   </nav>
 
   <!-- Sección de Niveles -->
-  <div class="niveles">
+  <div class="niveles"> <!-- Contenedor para los niveles de aprendizaje -->
     <!-- Nivel 1 - Fundamentos de Python -->
-    <div class="nivel nivel1">
-      <a href="Página 1.html" target="_blank">
-        <img src="img/1.fundamentosdepython.png" alt="Fundamentos de Python" class="nivel-img">
+    <div class="nivel nivel1"> <!-- Contenedor para el primer nivel -->
+      <a href="Página 1.html" target="_blank"> <!-- Enlace a la página del primer nivel -->
+        <img src="img/1.fundamentosdepython.png" alt="Fundamentos de Python" class="nivel-img"> <!-- Imagen del nivel 1 -->
       </a>
     </div>
 
     <!-- Nivel 2 - Estructuras de datos y funciones -->
-    <div class="nivel nivel2">
-      <a href="Página 2.html" target="_blank">
-        <img src="img/2.estructurasdedatosyfunciones.png" alt="Estructuras de Datos y Funciones" class="nivel-img">
+    <div class="nivel nivel2"> <!-- Contenedor para el segundo nivel -->
+      <a href="Página 2.html" target="_blank"> <!-- Enlace a la página del segundo nivel -->
+        <img src="img/2.estructurasdedatosyfunciones.png" alt="Estructuras de Datos y Funciones" class="nivel-img"> <!-- Imagen del nivel 2 -->
       </a>
     </div>
 
     <!-- Nivel 3 - Programación avanzada con Python -->
-    <div class="nivel nivel3">
-      <a href="Página 3.html" target="_blank">
-        <img src="img/3.programacionavanzadaconpython.png" alt="Programación Avanzada con Python" class="nivel-img">
+    <div class="nivel nivel3"> <!-- Contenedor para el tercer nivel -->
+      <a href="Página 3.html" target="_blank"> <!-- Enlace a la página del tercer nivel -->
+        <img src="img/3.programacionavanzadaconpython.png" alt="Programación Avanzada con Python" class="nivel-img"> <!-- Imagen del nivel 3 -->
       </a>
     </div>
   </div>
 
   <!-- Sección de Botones "Empezar" -->
-  <div class="botones-empezar">
+  <div class="botones-empezar"> <!-- Contenedor para los botones "Empezar" -->
     <!-- Botón "Empezar" para Fundamentos de Python -->
-    <a href="Página 1.html" target="_blank">
-      <img src="img/empezar.png" alt="Empezar Fundamentos de Python" class="nav-img">
+    <a href="Página 1.html" target="_blank"> <!-- Enlace al primer nivel -->
+      <img src="img/empezar.png" alt="Empezar Fundamentos de Python" class="nav-img"> <!-- Imagen del botón "Empezar" -->
     </a>
 
     <!-- Botón "Empezar" para Estructuras de Datos y Funciones -->
-    <a href="Página 2.html" target="_blank">
-      <img src="img/empezar.png" alt="Empezar Estructuras de Datos y Funciones" class="nav-img">
+    <a href="Página 2.html" target="_blank"> <!-- Enlace al segundo nivel -->
+      <img src="img/empezar.png" alt="Empezar Estructuras de Datos y Funciones" class="nav-img"> <!-- Imagen del botón "Empezar" -->
     </a>
 
     <!-- Botón "Empezar" para Programación Avanzada -->
-    <a href="Página 3.html" target="_blank">
-      <img src="img/empezar.png" alt="Empezar Programación Avanzada" class="nav-img">
+    <a href="Página 3.html" target="_blank"> <!-- Enlace al tercer nivel -->
+      <img src="img/empezar.png" alt="Empezar Programación Avanzada" class="nav-img"> <!-- Imagen del botón "Empezar" -->
     </a>
   </div>
 
   <!-- Pie de Página (Enlaces a redes sociales y contacto) -->
-  <ul class="piedepagina">
-    <li><a href="#"><img src="img/contactanos.png" alt="Contáctanos"></a></li>
-    <li><a href="https://api.whatsapp.com/send?phone=52" target="_blank"><img src="img/5555555555.png" alt="WhatsApp"></a></li>
-    <li><a href="https://mail.google.com/" target="_blank"><img src="img/zyncro@z.com.png" alt="Correo Electrónico"></a></li>
-    <li><a href="https://www.tiktok.com/@zyncro35?_t=ZM-8tcWeeIjXqo&_r=1" target="_blank"><img src="img/tiktokzyncro.ip.png" alt="TikTok Zyncro"></a></li>
-    <li><a href="https://www.facebook.com/" target="_blank"><img src="img/facebookzyncro.ip.png" alt="Facebook Zyncro"></a></li>
-    <li><a href="https://www.instagram.com/" target="_blank"><img src="img/instagramzyncro.ip.png" alt="Instagram Zyncro"></a></li>
-    <li><a href="https://x.com/" target="_blank"><img src="img/xzyncro.ip.png" alt="X Zyncro"></a></li>
+  <ul class="piedepagina"> <!-- Lista no ordenada para los enlaces del pie de página -->
+    <li><a href="#"><img src="img/contactanos.png" alt="Contáctanos"></a></li> <!-- Enlace de contacto -->
+    <li><a href="https://api.whatsapp.com/send?phone=52" target="_blank"><img src="img/5555555555.png" alt="WhatsApp"></a></li> <!-- Enlace a WhatsApp -->
+    <li><a href="https://mail.google.com/" target="_blank"><img src="img/zyncro@z.com.png" alt="Correo Electrónico"></a></li> <!-- Enlace a correo electrónico -->
+    <li><a href="https://www.tiktok.com/@zyncro35?_t=ZM-8tcWeeIjXqo&_r=1" target="_blank"><img src="img/tiktokzyncro.ip.png" alt="TikTok Zyncro"></a></li> <!-- Enlace a TikTok -->
+    <li><a href="https://www.facebook.com/" target="_blank"><img src="img/facebookzyncro.ip.png" alt="Facebook Zyncro"></a></li> <!-- Enlace a Facebook -->
+    <li><a href="https://www.instagram.com/" target="_blank"><img src="img/instagramzyncro.ip.png" alt="Instagram Zyncro"></a></li> <!-- Enlace a Instagram -->
+    <li><a href="https://x.com/" target="_blank"><img src="img/xzyncro.ip.png" alt="X Zyncro"></a></li> <!-- Enlace a X (anteriormente Twitter) -->
   </ul>
 
 </body>
