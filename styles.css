@@ -1,117 +1,87 @@
 /* Configuración general de la página */
 body {
-  background: black; /* Fondo negro */
-  font-family: Arial, Helvetica, sans-serif; /* Fuente general */
-  color: white; /* Color de texto blanco */
-  margin: 0; /* Elimina los márgenes por defecto */
-  padding: 0; /* Elimina el relleno por defecto */
-  width: 100vw; /* Asegura que el ancho sea el 100% del ancho de la ventana */
-  overflow-x: hidden; /* Elimina el desbordamiento horizontal si lo hubiera */
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Barra de navegación */
 nav {
-  background: black;  /* Color de fondo negro para la barra de navegación */
-  height: 70px;  /* Define la altura de la barra de navegación */
-  display: flex;  /* Usa flexbox para alinear los elementos en fila */
-  align-items: center;  /* Centra verticalmente los elementos dentro de la barra */
-  padding: 0;  /* Elimina cualquier relleno */
-  margin-top: 20px;  /* Mueve toda la barra de navegación 20px hacia abajo */
-  justify-content: space-between; /* Distribuye los elementos entre el inicio y el final */
+  background: black;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-/* Asegura que los elementos dentro del ul estén bien alineados */
 nav ul {
-  display: flex; /* Elementos en línea con flexbox */
-  align-items: center; /* Centra los elementos */
+  display: flex;
+  align-items: center;
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
 nav ul li {
-  list-style: none; /* Elimina viñetas */
+  list-style: none;
   margin: 0 15px;
 }
 
-/* Estilos del logo de Zyncro dentro de la barra de navegación */
-nav ul .logo-container {
+/* Estilos del logo y contenedor de imágenes en la barra de navegación */
+.logo-container, .nav-img-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinea el logo a la izquierda */
-  margin: 0; /* Elimina cualquier margen */
-  padding: 0; /* Elimina cualquier relleno */
-  width: auto; /* No es necesario un ancho fijo */
 }
 
-nav ul .logo-container img {
-  height: 70px;  /* Establece una altura de 70px para el logo */
-  width: auto;  /* Mantiene la proporción original de la imagen */
-  margin: 0;  /* Elimina cualquier margen */
-  padding: 0;  /* Elimina cualquier relleno */
+.logo-container img, .nav-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
 }
 
-/* Contenedor para las imágenes de "Examen" y "Temario" alineado a la izquierda */
-nav ul .nav-img-container {
-  display: flex;
-  justify-content: flex-start; /* Alinea las imágenes a la izquierda */
-  margin-right: auto;  /* Empuja el contenido hacia la izquierda */
-}
-
-nav ul .nav-img {
-  height: 70px;  /* Altura fija de 70px */
-  width: auto;  /* El ancho se ajusta automáticamente para mantener la proporción */
-  object-fit: contain;  /* Asegura que la imagen no se deforme */
-  margin: 0;  /* Elimina cualquier margen */
-  padding: 0;  /* Elimina cualquier relleno */
-}
-
-/* Asegura que las imágenes de "Examen" y "Temario" estén separadas de la imagen de "Zyncro" */
-nav ul .nav-img-container {
-  margin-left: 70px; /* Separa las imágenes de Examen y Temario 70px de Zyncro */
+.nav-img-container {
+  margin-left: 70px;
 }
 
 /* Sección de niveles */
 .niveles {
   display: flex;
-  justify-content: center; /* Centra los niveles horizontalmente */
-  gap: 30px; /* Espaciado entre los niveles de 30px */
-  margin-top: 70px; /* Añade 70px de margen superior para separar de las imágenes del Zyncro, Examen y Temario */
-  margin-bottom: 70px; /* Añade 70px de margen inferior para separar de las imágenes del pie de página */
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  max-width: 1200px; /* Límite de ancho máximo en pantallas grandes */
-  margin-left: auto;
-  margin-right: auto;
-  flex-wrap: wrap; /* Permite que los niveles se ajusten si hay poco espacio */
+  justify-content: center;
+  gap: 30px;
+  margin: 70px auto;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
 }
 
-/* Estilos individuales de cada nivel */
 .nivel {
   display: flex;
-  flex-direction: column; /* Alinea el contenido verticalmente */
-  align-items: center; /* Centra los elementos */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  flex-basis: auto; /* Ajusta el ancho automáticamente */
-  height: 150px; /* Cambiado a 150px */
-  width: auto; /* El ancho se ajusta automáticamente */
+  height: 130px;
 }
 
 .nivel img {
-  height: 100%; /* La imagen ocupa toda la altura del contenedor */
-  width: auto; /* El ancho se ajusta automáticamente para mantener la proporción */
+  height: 100%;
+  width: auto;
 }
 
-/* Nueva sección para los botones "Empezar" después de los niveles */
+/* Sección de botones "Empezar" */
 .empezar-seccion {
   display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
-  gap: 20px; /* Espaciado entre los botones */
-  margin-top: 50px; /* Añade un margen superior de 50px */
-  margin-bottom: 50px; /* Añade un margen inferior de 50px */
+  justify-content: center;
+  gap: 20px;
+  margin: 50px 0;
 }
 
 .empezar-seccion img {
-  height: 50px;  /* Tamaño uniforme de las imágenes */
+  height: 50px;
   width: auto;
 }
 
@@ -119,28 +89,21 @@ nav ul .nav-img-container {
 .piedepagina {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra las imágenes en el contenedor */
-  flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias líneas si es necesario */
-  gap: 0; /* Elimina el espaciado entre las imágenes */
-  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 20px;
   background: black;
-  width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
-  max-width: 1200px; /* Límite de ancho máximo en pantallas grandes */
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Estilos de las imágenes del pie de página */
 .piedepagina img {
-  height: 70px; /* Tamaño uniforme */
+  height: 70px;
   width: auto;
-  transition: transform 0.2s ease-in-out; /* Efecto de animación */
-  margin: 0; /* Elimina el margen entre las imágenes */
-  padding: 0; /* Elimina el relleno entre las imágenes */
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Efecto hover: Aumenta la imagen un poco al pasar el cursor */
 .piedepagina img:hover {
   transform: scale(1.1);
 }
