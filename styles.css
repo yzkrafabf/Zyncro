@@ -12,10 +12,6 @@ body {
 }
 
 /* Estilos para la barra de navegación */
-nav {
-  margin-top: 20px; /* Despega la barra de navegación 20px desde arriba */
-}
-
 nav ul {
   display: flex; /* Alinea los elementos horizontalmente */
   list-style-type: none; /* Elimina los puntos de la lista */
