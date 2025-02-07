@@ -75,7 +75,7 @@ nav ul .nav-img-container {
 .niveles {
   display: flex;
   justify-content: center; /* Centra los niveles horizontalmente */
-  gap: 90px; /* Espaciado entre los niveles de 90px */
+  gap: 50px; /* Espaciado entre los niveles de 50px */
   margin-top: 70px; /* Añade 70px de margen superior para separar de las imágenes del Zyncro, Examen y Temario */
   margin-bottom: 70px; /* Añade 70px de margen inferior para separar de las imágenes del pie de página */
   width: 100%; /* Asegura que ocupe todo el ancho disponible */
