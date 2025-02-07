@@ -18,6 +18,7 @@ nav ul {
   list-style-type: none; /* Elimina los puntos de la lista */
   margin: 0; /* Elimina el margen predeterminado */
   padding: 0; /* Elimina el relleno predeterminado */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
 }
 
 /* Estilos para las imágenes de la barra de navegación */
@@ -27,6 +28,9 @@ nav img {
 }
 
 /* Estilo para el contenedor de Examen y Temario */
+nav ul li:nth-child(2) { /* Selecciona el segundo <li> (Examen) */
+  margin-left: auto; /* Empuja Examen y Temario hacia la derecha */
+}
 nav ul li:nth-child(2) { /* Selecciona el segundo <li> (Examen) */
   margin-left: auto; /* Empuja Examen y Temario hacia la derecha */
 }
