@@ -46,10 +46,10 @@ nav ul .logo-container img {
 
 /* Estilos para las imágenes de "Examen" y "Temario" */
 nav ul .nav-img {
-  max-height: 40px;  /* Limita la altura máxima de estas imágenes a 40px */
-  width: auto;  /* Mantiene la proporción original de la imagen */
-  object-fit: contain;  /* Asegura que la imagen no se deforme dentro del contenedor */
-  margin-top: 0px;  /* No es necesario aplicar más margen porque la barra ya se bajó */
+  height: 70px;  /* Altura fija de 70px */
+  width: auto;  /* El ancho se ajusta automáticamente para mantener la proporción */
+  object-fit: contain;  /* Asegura que la imagen no se deforme */
+  margin-top: 0px;  /* No es necesario margen adicional */
 }
 
 /* Sección de niveles */
