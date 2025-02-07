@@ -7,14 +7,14 @@ body {
   padding: 0; /* Elimina el relleno por defecto */
 }
 
-/* Estilos de la barra de navegación */
+/* Barra de navegación */
 nav {
-  background: black; /* Fondo negro de la barra */
-  height: 70px; /* Altura de la barra de navegación */
-  display: flex; /* Activa flexbox */
-  align-items: center; /* Centra verticalmente el contenido */
-  padding: 0 20px; /* Espaciado lateral */
-  margin-top: 20px; /* Espaciado desde arriba */
+  background: black;  /* Color de fondo negro para la barra de navegación */
+  height: 70px;  /* Define la altura de la barra de navegación */
+  display: flex;  /* Usa flexbox para alinear los elementos en fila */
+  align-items: center;  /* Centra verticalmente los elementos dentro de la barra */
+  padding: 0 20px;  /* Agrega un espacio horizontal de 20px a los lados */
+  margin-top: 40px;  /* Mueve toda la barra de navegación 40px hacia abajo */
 }
 
 nav ul {
@@ -30,7 +30,7 @@ nav ul li {
   margin: 0 15px;
 }
 
-/* Estilos del logo */
+/* Estilos del logo de Zyncro dentro de la barra de navegación */
 nav ul .logo-container {
   display: flex;
   align-items: center;
@@ -39,15 +39,17 @@ nav ul .logo-container {
 }
 
 nav ul .logo-container img {
-  height: 70px; /* Tamaño del logo */
-  width: auto;
+  height: 70px;  /* Establece una altura de 70px para el logo */
+  width: auto;  /* Mantiene la proporción original de la imagen */
+  margin-top: 0px;  /* No necesita margen adicional ya que toda la barra ya se movió */
 }
 
-/* Estilos de las imágenes en la barra de navegación */
+/* Estilos para las imágenes de "Examen" y "Temario" */
 nav ul .nav-img {
-  max-height: 40px; /* Tamaño máximo de los botones */
-  width: auto;
-  object-fit: contain; /* Mantiene la proporción */
+  max-height: 40px;  /* Limita la altura máxima de estas imágenes a 40px */
+  width: auto;  /* Mantiene la proporción original de la imagen */
+  object-fit: contain;  /* Asegura que la imagen no se deforme dentro del contenedor */
+  margin-top: 0px;  /* No es necesario aplicar más margen porque la barra ya se bajó */
 }
 
 /* Sección de niveles */
