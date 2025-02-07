@@ -11,21 +11,19 @@ body {
 
 /* Barra de navegación */
 nav {
-  background: black;
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 0;
-  margin-top: 20px;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 nav ul {
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
 nav ul li {
@@ -33,35 +31,16 @@ nav ul li {
   margin: 0 15px;
 }
 
-nav ul .logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-  width: auto;
-}
-
-nav ul .logo-container img {
+nav ul .logo-container img,
+nav ul .nav-img {
   height: 70px;
   width: auto;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul .nav-img-container {
   display: flex;
   justify-content: flex-start;
-  margin-right: auto;
   margin-left: 70px;
-}
-
-nav ul .nav-img {
-  height: 70px;
-  width: auto;
-  object-fit: contain;
-  margin: 0;
-  padding: 0;
 }
 
 /* Sección de niveles */
@@ -69,12 +48,9 @@ nav ul .nav-img {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto;
   width: 100%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   flex-wrap: wrap;
 }
 
@@ -84,13 +60,12 @@ nav ul .nav-img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  flex-basis: auto;
-  height: 30px; /* Tamaño reducido a un tercio */
+  height: 30px;
   width: auto;
 }
 
 .nivel img {
-  height: 100%;
+  height: 30px; /* Reducción drástica del tamaño */
   width: auto;
 }
 
@@ -99,8 +74,7 @@ nav ul .nav-img {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .empezar-seccion img {
@@ -114,25 +88,19 @@ nav ul .nav-img {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0;
   list-style: none;
   padding: 20px;
-  background: black;
   width: 100%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .piedepagina img {
   height: 70px;
   width: auto;
   transition: transform 0.2s ease-in-out;
-  margin: 0;
-  padding: 0;
 }
 
 .piedepagina img:hover {
   transform: scale(1.1);
 }
-
