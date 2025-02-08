@@ -65,19 +65,53 @@ nav ul li img:hover {
 
 /* Estilos para la sección de niveles */
 .niveles {
-  display: flex; /* Alinea los niveles horizontalmente */
-  justify-content: center; /* Centra los niveles dentro del contenedor */
+  display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos dentro del contenedor */
   gap: 150px; /* Agrega una separación de 150px entre los niveles */
   width: 100%; /* Ocupa el 100% del ancho disponible */
-  margin: 100px auto 0; /* Añade 100px de separación superior y centra el contenedor */
+  margin: 100px auto 0; /* Añade 100px de separación superior y centra el contenedor horizontalmente */
 }
 
 /* Estilos para las imágenes de los niveles */
 .nivel img {
   height: 350px; /* Establece la altura de las imágenes a 350px */
-  width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
-  display: block; /* Elimina el espacio adicional debajo de las imágenes */
-  margin: 0; /* Elimina márgenes adicionales */
+  width: auto; /* Ajusta el ancho automáticamente para mantener la proporción de la imagen */
+  display: block; /* Elimina cualquier espacio debajo de la imagen */
+  margin: 0; /* Elimina márgenes adicionales alrededor de la imagen */
+  transition: transform 0.3s ease; /* Aplica una transición suave cuando se transforma la imagen */
+}
+
+/* Estilo para los contenedores de cada nivel */
+.nivel {
+  position: relative; /* Permite posicionar los elementos dentro del contenedor de manera relativa */
+}
+
+/* Ventanas emergentes (popups) */
+.popup {
+  display: none; /* Oculta el popup de forma predeterminada */
+  position: absolute; /* Posiciona el popup de manera absoluta dentro del contenedor */
+  bottom: 0px; /* Coloca el popup a 0px del borde inferior del contenedor */
+  left: 50%; /* Centra el popup horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición para asegurarse de que esté centrado */
+  background-color: rgba(169, 169, 169, 0.8); /* Fondo gris con opacidad */
+  color: black; /* Establece el color del texto a blanco */
+  padding: 13px; /* Añade un relleno de 20px dentro del popup */
+  border-radius: 30px; /* Redondea las esquinas del popup */
+  font-size: 15.12px; /* Tamaño de la fuente */
+  width: 250px; /* Establece un ancho fijo para el popup */
+  text-align: center; /* Centra el texto dentro del popup */
+  white-space: normal; /* Permite que el texto se ajuste en varias líneas si es necesario */
+  line-height: 1.5; /* Define el espacio entre las líneas del texto */
+  opacity: 0; /* Hace que el popup sea completamente invisible al principio */
+  visibility: hidden; /* Hace que el popup no sea visible al principio */
+  transition: opacity 0.3s, visibility 0s 0.3s; /* Transición suave para la opacidad y visibilidad */
+}
+
+/* Mostrar el popup cuando el cursor esté sobre el contenedor */
+.nivel:hover .popup {
+  display: block; /* Muestra el popup */
+  opacity: 1; /* Hace visible el popup */
+  visibility: visible; /* Cambia la visibilidad a visible */
 }
 
 /* Estilo para la separación entre la sección de Niveles y la sección de Botones "Empezar" */
@@ -145,7 +179,3 @@ nav ul li img:hover {
 .piedepagina img:not([src*="contactanos.png"]):hover {
   transform: scale(1.10); /* Aumenta el tamaño al 110% */
 }
-
-
-
-
