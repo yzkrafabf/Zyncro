@@ -60,7 +60,7 @@ nav ul li:nth-child(3) img {
 
 /* Efecto al pasar el cursor sobre las imágenes */
 nav ul li img:hover {
-  transform: scale(1.04); /* Aumenta el tamaño al 110% */
+  transform: scale(1.04); /* Aumenta el tamaño al 104% */
 }
 
 /* Estilos para la sección de niveles */
@@ -85,7 +85,7 @@ nav ul li img:hover {
   display: flex;
   justify-content: center;
   gap: 310px;
-  margin-top: 45px; /* Agrega un margen superior de 20px */
+  margin-top: 45px; /* Agrega un margen superior de 45px */
 }
 
 /* Estilos para la sección de botones "Empezar" */
@@ -112,7 +112,7 @@ nav ul li img:hover {
 
 /* Efecto al pasar el cursor sobre las imágenes de los botones "Empezar" */
 .botones-empezar img:hover {
-  transform: scale(2.30); /* Aumenta el tamaño al 104% */
+  transform: scale(2.30); /* Aumenta el tamaño al 230% */
 }
 
 /* Estilo para la separación entre la sección de Botones "Empezar" y la sección de Pie de Página */
@@ -138,7 +138,14 @@ nav ul li img:hover {
   height: 75px; /* Establece la altura de las imágenes a 75px */
   width: auto; /* El ancho será automático, manteniendo la proporción */
   margin: 0; /* Elimina cualquier margen que pueda existir entre las imágenes */
+  transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
 }
+
+/* Efecto al pasar el cursor sobre las imágenes del pie de página, excepto "contactanos.png" */
+.piedepagina img:not([src*="contactanos.png"]):hover {
+  transform: scale(1.10); /* Aumenta el tamaño al 110% */
+}
+
 
 
 
