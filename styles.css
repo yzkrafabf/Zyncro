@@ -11,32 +11,22 @@ body {
   background-color: black;
 }
 
-/* Estilos para la barra de navegación */
-nav {
-  margin-top: 20px; /* Añade 20px de separación en la parte superior */
-}
-
-nav ul {
-  display: flex; /* Alinea los elementos horizontalmente */
-  list-style-type: none; /* Elimina los puntos de la lista */
-  margin: 0; /* Elimina el margen predeterminado */
-  padding: 0; /* Elimina el relleno predeterminado */
-  width: 100%; /* Ocupa el 100% del ancho disponible */
-}
-
-/* Estilos para los elementos de la lista (li) */
-nav ul li {
-  flex: 1; /* Cada <li> ocupa el mismo espacio */
-}
-
-/* Estilo específico para el contenedor de Zyncro */
-nav ul li:first-child {
-  margin-right: 20px; /* Añade 20px de separación entre Zyncro y Examen */
-}
-
 /* Estilos para las imágenes de la barra de navegación */
 nav img {
   height: 75px; /* Altura fija de 75px */
-  width: 100%; /* Ocupa el 100% del ancho del <li> */
   display: block; /* Elimina espacios adicionales debajo de las imágenes */
 }
+
+/* Ajuste específico para la imagen de Zyncro */
+nav ul li:first-child img {
+  width: 50%; /* Reduce el ancho al 50% del original */
+  margin: 0 auto; /* Centra la imagen dentro del <li> */
+}
+
+/* Ajuste específico para las imágenes de Examen y Temario */
+nav ul li:nth-child(2) img, /* Examen */
+nav ul li:nth-child(3) img  /* Temario */ {
+  width: 125%; /* Aumenta el ancho un 25% más del original */
+  margin: 0 auto; /* Centra la imagen dentro del <li> */
+}
+
