@@ -12,6 +12,10 @@ body {
 }
 
 /* Estilos para la barra de navegación */
+nav {
+  margin-top: 20px; /* Añade 20px de separación en la parte superior */
+}
+
 nav ul {
   display: flex; /* Alinea los elementos horizontalmente */
   list-style-type: none; /* Elimina los puntos de la lista */
