@@ -8,7 +8,7 @@ html, body {
 
 /* Fondo negro para toda la página */
 body {
-  background-color: green;
+  background-color: black;
 }
 
 /* Estilos para la barra de navegación */
@@ -55,5 +55,22 @@ nav ul li:nth-child(2) img {
 /* Ajuste para la imagen Temario */
 nav ul li:nth-child(3) img {
   width: 100%; /* Temario ocupa el 100% del espacio disponible */
+}
+
+/* Estilos para la sección de niveles */
+.niveles {
+  display: flex; /* Alinea los niveles horizontalmente */
+  justify-content: center; /* Centra los niveles dentro del contenedor */
+  gap: 150px; /* Agrega una separación de 150px entre los niveles */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  margin: 100px auto 0; /* Añade 100px de separación superior y centra el contenedor */
+}
+
+/* Estilos para las imágenes de los niveles */
+.nivel img {
+  height: 350px; /* Establece la altura de las imágenes a 350px */
+  width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+  display: block; /* Elimina el espacio adicional debajo de las imágenes */
+  margin: 0; /* Elimina márgenes adicionales */
 }
 
