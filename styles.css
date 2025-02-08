@@ -74,3 +74,32 @@ nav ul li:nth-child(3) img {
   margin: 0; /* Elimina márgenes adicionales */
 }
 
+/* Estilo para la separación entre la sección de Niveles y la sección de Botones "Empezar" */
+.botones-empezar {
+  display: flex;
+  justify-content: center;
+  gap: 310px;
+  margin-top: 45px; /* Agrega un margen superior de 20px */
+}
+
+/* Estilos para la sección de botones "Empezar" */
+.botones-empezar {
+  display: flex; /* Usa flexbox para organizar los elementos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 310px; /* Separa los botones por 400px */
+}
+
+/* Estilos para los enlaces dentro de la sección de botones "Empezar" */
+.botones-empezar a {
+  display: inline-block; /* Alinea los enlaces en línea */
+  height: 45px; /* Establece la altura de los botones */
+  width: auto; /* El ancho se ajustará automáticamente según la imagen */
+}
+
+/* Estilos para las imágenes de los botones "Empezar" */
+.botones-empezar img {
+  height: 100%; /* Hace que las imágenes se ajusten a la altura del contenedor */
+  width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+  display: block; /* Elimina cualquier espacio adicional debajo de las imágenes */
+}
+
