@@ -40,3 +40,15 @@ nav img {
   width: 100%; /* Ocupa el 100% del ancho del <li> */
   display: block; /* Elimina espacios adicionales debajo de las imágenes */
 }
+
+/* Ajustes específicos de ancho para cada imagen */
+nav ul li:first-child img { /* Zyncro.png */
+  width: 50%; /* Reduce el ancho al 50% de su tamaño actual */
+}
+
+nav ul li:nth-child(2) img, /* Examen.png */
+nav ul li:nth-child(3) img  /* Temario.png */
+{
+  width: 125%; /* Aumenta el ancho al 125% de su tamaño actual */
+}
+
