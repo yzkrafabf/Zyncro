@@ -103,3 +103,30 @@ nav ul li:nth-child(3) img {
   display: block; /* Elimina cualquier espacio adicional debajo de las imágenes */
 }
 
+/* Estilo para la separación entre la sección de Botones "Empezar" y la sección de Pie de Página */
+.botones-empezar {
+  display: flex;
+  justify-content: center;
+  gap: 310px;
+  margin-bottom: 100px; /* Añadir margen inferior */
+}
+
+/* Estilo para el pie de página */
+.piedepagina {
+  display: flex; /* Utiliza flexbox para alinear los elementos en fila */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 0; /* Elimina cualquier espacio entre las imágenes */
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding de la lista */
+  margin: 0; /* Elimina cualquier margen que pueda existir */
+}
+
+/* Estilo para las imágenes en el pie de página */
+.piedepagina img {
+  height: 75px; /* Establece la altura de las imágenes a 75px */
+  width: auto; /* El ancho será automático, manteniendo la proporción */
+  margin: 0; /* Elimina cualquier margen que pueda existir entre las imágenes */
+}
+
+
+
