@@ -1,0 +1,122 @@
+/* Elimina márgenes y rellenos predeterminados, y asegura que todo esté pegado a los bordes */
+html, body {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+  width: 100%; /* Ocupa el 100% del ancho de la ventana */
+  height: 100%; /* Ocupa el 100% de la altura de la ventana */
+}
+
+/* Fondo negro para toda la página */
+body {
+  background-color: black;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  margin-top: 20px; /* Añade 20px de separación en la parte superior */
+}
+
+nav ul {
+  display: flex; /* Alinea los elementos horizontalmente */
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+}
+
+/* Estilos para los elementos de la lista (li) */
+nav ul li {
+  flex-grow: 1; /* Hace que los <li> crezcan y ocupen el espacio disponible */
+  margin: 0; /* Elimina los márgenes entre los elementos */
+}
+
+/* Estilo específico para el contenedor de Zyncro */
+nav ul li:first-child {
+  margin-right: 0; /* Elimina cualquier separación entre Zyncro y Examen */
+}
+
+/* Estilos para las imágenes de la barra de navegación */
+nav img {
+  height: 75px; /* Altura fija de 75px */
+  display: block; /* Elimina espacios adicionales debajo de las imágenes */
+  width: 100%; /* Asegura que la imagen ocupe el 100% del <li> */
+  transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
+}
+
+/* Ajuste específico para la imagen Zyncro */
+nav ul li:first-child img {
+  width: 90%; /* Zyncro ocupa el 90% del espacio disponible */
+}
+
+/* Ajuste para la imagen Examen */
+nav ul li:nth-child(2) img {
+  width: 100%; /* Examen ocupa el 100% del espacio disponible */
+}
+
+/* Ajuste para la imagen Temario */
+nav ul li:nth-child(3) img {
+  width: 100%; /* Temario ocupa el 100% del espacio disponible */
+}
+
+/* Efecto al pasar el cursor sobre las imágenes */
+nav ul li img:hover {
+  transform: scale(1.04); /* Aumenta el tamaño al 104% */
+}
+
+/* Estilos para la sección de niveles */
+.niveles {
+  display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos dentro del contenedor */
+  gap: 150px; /* Agrega una separación de 150px entre los niveles */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  margin: 105px auto 0; /* Añade 105px de separación superior y centra el contenedor horizontalmente */
+}
+
+/* Estilos para las imágenes de los niveles */
+.nivel img {
+  height: 350px; /* Establece la altura de las imágenes a 350px */
+  width: auto; /* Ajusta el ancho automáticamente para mantener la proporción de la imagen */
+  display: block; /* Elimina cualquier espacio debajo de la imagen */
+  margin: 0; /* Elimina márgenes adicionales alrededor de la imagen */
+  transition: transform 0.3s ease; /* Aplica una transición suave cuando se transforma la imagen */
+}
+
+/* Efecto al pasar el cursor sobre las imágenes de los niveles */
+.nivel img:hover {
+  transform: scale(1.10); /* Aumenta la imagen al 110% de su tamaño */
+}
+
+/* Estilo para los contenedores de cada nivel */
+.nivel {
+  position: relative; /* Permite posicionar los elementos dentro del contenedor de manera relativa */
+}
+
+/* Estilo para el pie de página */
+.piedepagina {
+  display: flex;
+  justify-content: space-evenly; /* Distribuye las imágenes uniformemente */
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 105px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Estilo para las imágenes en el pie de página */
+.piedepagina img {
+  height: 75px;
+  width: auto;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  flex-basis: auto;
+  object-fit: contain;
+}
+
+/* Efecto al pasar el cursor sobre las imágenes */
+.piedepagina img:not([src*="contactanos.png"]):hover {
+  transform: scale(1.10);
+}
+
