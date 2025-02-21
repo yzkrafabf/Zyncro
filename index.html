@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Historia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Historia Universal</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#antigua">Edad Antigua</a></li>
+            <li><a href="#media">Edad Media</a></li>
+            <li><a href="#moderna">Edad Moderna</a></li>
+            <li><a href="#contemporanea">Edad Contemporánea</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="antigua">
+            <h2>Edad Antigua</h2>
+            <p>La Edad Antigua abarca desde la invención de la escritura hasta la caída del Imperio Romano de Occidente.</p>
+            <img src="antigua.jpg" alt="Civilizaciones antiguas">
+            <table>
+                <tr><th>Civilización</th><th>Año Aproximado</th></tr>
+                <tr><td>Egipto</td><td>3000 a.C.</td></tr>
+                <tr><td>Roma</td><td>753 a.C.</td></tr>
+            </table>
+        </section>
+        <section id="media">
+            <h2>Edad Media</h2>
+            <p>Periodo comprendido entre la caída del Imperio Romano y el Renacimiento.</p>
+            <video controls>
+                <source src="edad_media.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section id="moderna">
+            <h2>Edad Moderna</h2>
+            <p>Comienza con la caída de Constantinopla en 1453 y se extiende hasta la Revolución Francesa en 1789.</p>
+            <button onclick="mostrarEjemplo()">Ver Datos</button>
+            <pre id="ejemploCodigo"></pre>
+        </section>
+        <section id="contemporanea">
+            <h2>Edad Contemporánea</h2>
+            <p>Desde finales del siglo XVIII hasta la actualidad.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
