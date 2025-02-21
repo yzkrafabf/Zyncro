@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Avanzada con Python - Zyncro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Programación Avanzada con Python</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#archivos">(1.) Manejo de archivos</a></li>
+            <li><a href="#lectura">(1.1.) Lectura y escritura de archivos</a></li>
+            <li><a href="#modulos">(2.) Módulos y bibliotecas</a></li>
+            <li><a href="#importacion">(2.1.) Importación y uso de bibliotecas estándar</a></li>
+            <li><a href="#poo">(3.) Programación Orientada a Objetos (POO)</a></li>
+            <li><a href="#clases">(3.1.) Clases, objetos, atributos y métodos</a></li>
+            <li><a href="#ejemplos">(3.2.) Ejemplos prácticos de POO</a></li>
+            <li><a href="#proyectos">(4.) Proyectos finales</a></li>
+            <li><a href="#integracion">(4.1.) Integración de conceptos en aplicaciones reales</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="archivos">
+            <h2>(1.) Manejo de archivos</h2>
+    <p>El manejo de archivos en Python es fundamental para leer, escribir y manipular archivos de texto o binarios. Permite almacenar y recuperar información de manera persistente, lo que es clave en el desarrollo de software. Los archivos pueden ser de texto (como .txt, .csv) o binarios (como .jpg, .pdf).</p>
+
+    
+
+
+
+        </section>
+        <section id="lectura">
+            <h2>(1.1.) Lectura y escritura de archivos</h2>
+    <p>Python proporciona la función <code>open()</code> para trabajar con archivos. Esta función acepta dos argumentos principales:</p>
+    <pre><code>open("nombre_del_archivo", "modo")</code></pre>
+    <p><strong>nombre_del_archivo:</strong> Nombre o ruta del archivo a manipular.</p>
+    <p><strong>modo:</strong> Define la operación que se realizará (lectura, escritura, etc.).</p>
+
+    <h3>Modos de Apertura de Archivos</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Modo</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>'r'</code></td>
+                <td>Modo lectura (predeterminado). Lanza error si el archivo no existe.</td>
+            </tr>
+            <tr>
+                <td><code>'w'</code></td>
+                <td>Modo escritura. Si el archivo existe, se sobrescribe. Si no, se crea.</td>
+            </tr>
+            <tr>
+                <td><code>'a'</code></td>
+                <td>Modo agregar. Escribe al final del archivo sin borrar su contenido.</td>
+            </tr>
+            <tr>
+                <td><code>'x'</code></td>
+                <td>Crea un archivo nuevo y da error si ya existe.</td>
+            </tr>
+            <tr>
+                <td><code>'b'</code></td>
+                <td>Modo binario (añadir a 'r', 'w', 'a').</td>
+            </tr>
+            <tr>
+                <td><code>'t'</code></td>
+                <td>Modo texto (predeterminado, se usa con 'r', 'w', 'a').</td>
+            </tr>
+            <tr>
+                <td><code>'r+'</code></td>
+                <td>Lectura y escritura sin borrar contenido.</td>
+            </tr>
+            <tr>
+                <td><code>'w+'</code></td>
+                <td>Escritura y lectura, pero borra contenido previo.</td>
+            </tr>
+            <tr>
+                <td><code>'a+'</code></td>
+                <td>Agrega contenido sin borrar y permite leer.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Ejemplo de Lectura de un Archivo</h3>
+    <pre><code># Abrimos un archivo en modo lectura ('r')
+with open("archivo.txt", "r", encoding="utf-8") as archivo:
+    contenido = archivo.read()  # Leer todo el contenido
+    print(contenido)</code></pre>
+    <p><strong>encoding="utf-8":</strong> Se usa para evitar problemas con caracteres especiales.</p>
+    <p><strong>El bloque <code>with</code>:</strong> Asegura que el archivo se cierre correctamente tras su uso.</p>
+
+    <h3>Ejemplo de Escritura en un Archivo</h3>
+    <pre><code># Abre (o crea) un archivo en modo escritura ('w')
+with open("archivo.txt", "w", encoding="utf-8") as archivo:
+    archivo.write("Hola, mundo!\n")
+    archivo.write("Segunda línea de texto.\n")</code></pre>
+    <p>Si el archivo ya existe, este código sobrescribe su contenido.</p>
+
+    <h3>Ejemplo de Agregar Contenido a un Archivo Existente</h3>
+    <pre><code># Modo 'a' (agregar al final sin borrar contenido existente)
+with open("archivo.txt", "a", encoding="utf-8") as archivo:
+    archivo.write("Nueva línea agregada.\n")</code></pre>
+
+    <h3>Lectura Línea por Línea</h3>
+    <p>Si queremos leer el archivo línea por línea, podemos usar <code>readline()</code> o <code>readlines()</code>:</p>
+    <pre><code>with open("archivo.txt", "r", encoding="utf-8") as archivo:
+    for linea in archivo:
+        print(linea.strip())  # .strip() quita espacios o saltos de línea</code></pre>
+
+    <h3>Ejemplo de Lectura y Escritura Sin Borrar Contenido (<code>r+</code>)</h3>
+    <pre><code>with open("archivo.txt", "r+", encoding="utf-8") as archivo:
+    contenido = archivo.read()
+    archivo.write("\nNueva información agregada.")</code></pre>
+    <p><strong>Importante:</strong> La posición del puntero cambia con cada operación de lectura o escritura.</p>
+
+    <h3>Archivos en Modo Binario</h3>
+    <p>Cuando trabajamos con imágenes, archivos .exe o .pdf, usamos el modo <code>'rb'</code> o <code>'wb'</code>:</p>
+    <pre><code># Leer un archivo binario (ejemplo: imagen)
+with open("imagen.jpg", "rb") as archivo:
+    contenido = archivo.read()</code></pre>
+    <pre><code># Escribir un archivo binario
+with open("copia.jpg", "wb") as nuevo_archivo:
+    nuevo_archivo.write(contenido)</code></pre>
+
+    <h2>Uso de Bloques <code>with</code></h2>
+    <p>El uso de <code>with</code> en Python simplifica la apertura y cierre de archivos:</p>
+    <p><strong>Ventajas de <code>with</code>:</strong></p>
+    <ul>
+        <li>No necesitamos llamar manualmente a <code>close()</code>, ya que Python lo hace automáticamente.</li>
+        <li>Evita errores en caso de que ocurra una excepción mientras el archivo está abierto.</li>
+        <li>Mejora la legibilidad y eficiencia del código.</li>
+    </ul>
+
+    <h3>Ejemplo sin <code>with</code> (menos seguro):</h3>
+    <pre><code>archivo = open("datos.txt", "r")
+contenido = archivo.read()
+archivo.close()</code></pre>
+
+    <h3>Ejemplo con <code>with</code> (recomendado):</h3>
+    <pre><code>with open("datos.txt", "r") as archivo:
+    contenido = archivo.read()  # Se cierra automáticamente al salir del bloque</code></pre>
+        </section>
+
+
+
+        <section id="modulos">
+            <h2>(2.) Módulos y bibliotecas</h2>
+            <h3>Módulo:</h3>
+            <p>Un archivo <code>.py</code> que contiene código Python, como funciones y variables, para importar y reutilizar en otros scripts.</p>
+
+            <h3>Biblioteca:</h3>
+            <p>Una colección de módulos empaquetados que ofrecen funcionalidades específicas, como <code>numpy</code> para computación numérica.</p>
+        </section>
+
+
+
+        <section id="importacion">
+            <h2>(2.1.) Importación y uso de bibliotecas estándar</h2>
+            <p>Python permite importar módulos y bibliotecas de varias maneras:</p>
+        
+            <h3>2.1 Importación de Módulos</h3>
+            <p>Para importar un módulo completo usamos <code>import nombre_del_modulo</code>:</p>
+            <pre><code>import os  # Módulo para operaciones del sistema
+        import math  # Módulo para funciones matemáticas</code></pre>
+        
+            <p>Para importar una función específica usamos <code>from nombre_del_modulo import funcion</code>:</p>
+            <pre><code>from math import sqrt  # Solo importa sqrt()
+        resultado = sqrt(25)  # Devuelve 5.0</code></pre>
+        
+            <p>También se puede asignar un alias con <code>as</code>:</p>
+            <pre><code>import datetime as dt
+        fecha_actual = dt.datetime.now()
+        print(fecha_actual)</code></pre>
+        
+            <h3>Bibliotecas Estándar</h3>
+            <p>Python cuenta con una biblioteca estándar con módulos para múltiples tareas. Algunos de los más comunes son:</p>
+        
+            <h2>🔹 <code>os</code> - Manejo del Sistema Operativo</h2>
+            <p>Permite interactuar con el sistema de archivos y ejecutar comandos del sistema.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Función</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>os.getcwd()</code></td>
+                        <td>Obtiene el directorio actual.</td>
+                    </tr>
+                    <tr>
+                        <td><code>os.listdir()</code></td>
+                        <td>Lista archivos y carpetas en un directorio.</td>
+                    </tr>
+                    <tr>
+                        <td><code>os.mkdir("nueva_carpeta")</code></td>
+                        <td>Crea un directorio.</td>
+                    </tr>
+                    <tr>
+                        <td><code>os.remove("archivo.txt")</code></td>
+                        <td>Borra un archivo.</td>
+                    </tr>
+                    <tr>
+                        <td><code>os.rmdir("carpeta")</code></td>
+                        <td>Borra un directorio vacío.</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <h5>Ejemplo de uso del módulo <code>os</code>:</h5>
+            <pre><code>import os
+        
+        print("Directorio actual:", os.getcwd())  
+        print("Archivos en la carpeta:", os.listdir())</code></pre>
+        
+            <h4>🔹 <code>math</code> - Funciones Matemáticas Avanzadas</h4>
+            <p>Este módulo ofrece funciones matemáticas avanzadas.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Función</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>math.sqrt(x)</code></td>
+                        <td>Raíz cuadrada de x.</td>
+                    </tr>
+                    <tr>
+                        <td><code>math.pi</code></td>
+                        <td>Valor de π.</td>
+                    </tr>
+                    <tr>
+                        <td><code>math.pow(x, y)</code></td>
+                        <td>Eleva x a la potencia y.</td>
+                    </tr>
+                    <tr>
+                        <td><code>math.floor(x)</code></td>
+                        <td>Redondea x al entero menor.</td>
+                    </tr>
+                    <tr>
+                        <td><code>math.ceil(x)</code></td>
+                        <td>Redondea x al entero mayor.</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <h5>Ejemplo de uso del módulo <code>math</code>:</h5>
+            <pre><code>import math
+        
+        print("Raíz cuadrada de 16:", math.sqrt(16))  
+        print("Valor de pi:", math.pi)  
+        print("Redondeo hacia abajo de 7.8:", math.floor(7.8))</code></pre>
+        
+            <h4>🔹 <code>random</code> - Generación de Números Aleatorios</h4>
+            <p>Este módulo permite trabajar con valores aleatorios.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Función</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>random.randint(a, b)</code></td>
+                        <td>Número entero aleatorio entre a y b.</td>
+                    </tr>
+                    <tr>
+                        <td><code>random.random()</code></td>
+                        <td>Número flotante entre 0 y 1.</td>
+                    </tr>
+                    <tr>
+                        <td><code>random.choice(lista)</code></td>
+                        <td>Devuelve un elemento aleatorio de una lista.</td>
+                    </tr>
+                    <tr>
+                        <td><code>random.shuffle(lista)</code></td>
+                        <td>Mezcla aleatoriamente una lista.</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <h4>Ejemplo de uso del módulo <code>random</code>:</h4>
+            <pre><code>import random
+        
+        print("Número aleatorio entre 1 y 10:", random.randint(1, 10))  
+        print("Número flotante entre 0 y 1:", random.random())  
+        
+        lista = [1, 2, 3, 4, 5]
+        random.shuffle(lista)
+        print("Lista mezclada:", lista)</code></pre>
+        
+            <h4>🔹 <code>datetime</code> - Manejo de Fechas y Horas</h4>
+            <p>Este módulo permite trabajar con fechas y tiempos.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Función</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>datetime.datetime.now()</code></td>
+                        <td>Obtiene la fecha y hora actual.</td>
+                    </tr>
+                    <tr>
+                        <td><code>datetime.date(año, mes, día)</code></td>
+                        <td>Crea una fecha específica.</td>
+                    </tr>
+                    <tr>
+                        <td><code>datetime.timedelta(días=x)</code></td>
+                        <td>Permite sumar o restar días a una fecha.</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <h5>Ejemplo de uso del módulo <code>datetime</code>:</h5>
+            <pre><code>import datetime
+        
+        fecha_actual = datetime.datetime.now()
+        print("Fecha y hora actual:", fecha_actual)
+        
+        fecha_especifica = datetime.date(2025, 2, 21)
+        print("Fecha específica:", fecha_especifica)</code></pre>
+        </section>
+
+
+
+        <section id="poo">
+            <h2>(3.) Programación Orientada a Objetos (POO)</h2>
+            <p>
+              La Programación Orientada a Objetos (POO) es un paradigma de programación que organiza el código en objetos. 
+              Un objeto es una instancia de una clase, que tiene atributos (propiedades) y métodos (funciones). La POO facilita la reutilización de código, 
+              la modularidad, la escalabilidad y la mantenibilidad. Los principales conceptos de la POO en Python son Clases, Objetos, Atributos, Métodos, Herencia, Encapsulamiento y Polimorfismo.
+          </p>
+        </section>
+
+
+        
+        <section id="clases">
+            <h2>(3.1.) Clases, objetos, atributos y métodos</h2>
+          <h3>Clases y Objetos</h3>
+          <p><strong>Clase:</strong> Es un plano o molde para crear objetos. Define los atributos y métodos que tendrán sus instancias.</p>
+          <p><strong>Objeto:</strong> Es una instancia de una clase. Cada objeto puede tener valores diferentes para sus atributos, pero todos comparten los mismos métodos.</p>
+      
+          <h3>Atributos y Métodos</h3>
+          <p><strong>Atributos:</strong> Son las propiedades de un objeto, como el nombre, la edad, etc.</p>
+          <p><strong>Métodos:</strong> Son las funciones definidas dentro de una clase, que describen las acciones que un objeto puede realizar.</p>
+      
+          <h4>Ejemplo de Clase y Objeto en Python:</h4>
+          <pre><code>
+      class Persona:
+          def __init__(self, nombre, edad):
+              self.nombre = nombre  # Atributo
+              self.edad = edad      # Atributo
+          
+          def saludar(self):
+              return f"Hola, soy {self.nombre} y tengo {self.edad} años."
+      
+      # Crear un objeto de la clase Persona
+      p1 = Persona("Carlos", 25)
+      
+      # Llamar al método del objeto
+      print(p1.saludar())  # Salida: Hola, soy Carlos y tengo 25 años.
+          </code></pre>
+      
+          <p>En este ejemplo:</p>
+          <ul>
+              <li><code>__init__(self, nombre, edad)</code> es el constructor de la clase, que inicializa los atributos nombre y edad cuando se crea un objeto de la clase.</li>
+              <li><code>saludar(self)</code> es un método que realiza una acción sobre los atributos de la clase.</li>
+          </ul>
+        </section>
+
+
+
+        <section id="ejemplos">
+            <h2>(3.2.) Ejemplos prácticos de POO</h2>
+            <h3>Herencia</h3>
+            <p>La herencia permite que una clase herede atributos y métodos de otra. Esto facilita la reutilización de código y la creación de clases más específicas a partir de clases generales.</p>
+        
+            <pre><code>
+        class Persona:
+            def __init__(self, nombre, edad):
+                self.nombre = nombre
+                self.edad = edad
+            
+            def saludar(self):
+                return f"Hola, soy {self.nombre}."
+        
+        # Clase hija Estudiante que hereda de Persona
+        class Estudiante(Persona):
+            def __init__(self, nombre, edad, curso):
+                super().__init__(nombre, edad)  # Llamar al constructor de la clase base
+                self.curso = curso
+            
+            def presentarse(self):
+                return f"{self.saludar()} Estoy estudiando {self.curso}."
+        
+        # Crear un objeto Estudiante
+        estudiante = Estudiante("Ana", 22, "Python")
+        
+        # Llamar a los métodos
+        print(estudiante.presentarse())  # Salida: Hola, soy Ana. Estoy estudiando Python.
+            </code></pre>
+        
+            <p>En este ejemplo:</p>
+            <ul>
+                <li>La clase Estudiante hereda de Persona y añade el atributo curso.</li>
+                <li>La función <code>super().__init__(nombre, edad)</code> llama al constructor de la clase base Persona para inicializar los atributos heredados.</li>
+            </ul>
+        
+            <h3>Encapsulamiento</h3>
+            <p>El encapsulamiento es el concepto de restringir el acceso a ciertos atributos de un objeto, protegiendo así los datos internos y controlando el acceso a través de métodos.</p>
+            <p>Se utilizan convenciones como:</p>
+            <ul>
+                <li>Atributos protegidos: Prefijados con un solo guion bajo (<code>_</code>).</li>
+                <li>Atributos privados: Prefijados con doble guion bajo (<code>__</code>), lo que hace que no sean fácilmente accesibles desde fuera de la clase.</li>
+            </ul>
+        
+            <pre><code>
+        class Coche:
+            def __init__(self, marca, modelo, velocidad_maxima):
+                self.marca = marca
+                self.modelo = modelo
+                self._velocidad_maxima = velocidad_maxima  # Atributo protegido
+                self.__seguro = True  # Atributo privado
+            
+            def mostrar_info(self):
+                return f"{self.marca} {self.modelo} - Velocidad Máxima: {self._velocidad_maxima} km/h"
+        
+        # Crear un objeto Coche
+        coche = Coche("Toyota", "Corolla", 180)
+        
+        # Acceder al atributo protegido
+        print(coche._velocidad_maxima)  # Salida: 180
+        
+        # Intentar acceder al atributo privado (no es recomendado)
+        print(coche.__seguro)  # Error: AttributeError: 'Coche' object has no attribute '__seguro'
+            </code></pre>
+        
+            <p>El atributo <code>__seguro</code> está marcado como privado, lo que impide su acceso directamente desde fuera de la clase.</p>
+            <p>El atributo <code>_velocidad_maxima</code> es protegido, por lo que se puede acceder desde fuera, pero no debería modificarse directamente.</p>
+        
+            <h3>Polimorfismo</h3>
+            <p>El polimorfismo permite que diferentes clases compartan el mismo nombre de método, pero con comportamientos diferentes según la clase que lo implemente. Esto se logra mediante la sobrescritura de métodos en las clases hijas.</p>
+        
+            <pre><code>
+        class Animal:
+            def hacer_sonido(self):
+                return "El animal hace un sonido."
+        
+        class Perro(Animal):
+            def hacer_sonido(self):
+                return "El perro ladra."
+        
+        class Gato(Animal):
+            def hacer_sonido(self):
+                return "El gato maúlla."
+        
+        # Crear objetos
+        perro = Perro()
+        gato = Gato()
+        
+        # Polimorfismo: El mismo método, pero con comportamientos diferentes
+        print(perro.hacer_sonido())  # Salida: El perro ladra.
+        print(gato.hacer_sonido())   # Salida: El gato maúlla.
+            </code></pre>
+        
+            <p>En este ejemplo:</p>
+            <ul>
+                <li>La clase Animal tiene un método <code>hacer_sonido()</code>.</li>
+                <li>Las clases Perro y Gato sobrescriben este método para proporcionar comportamientos específicos.</li>
+            </ul>
+        </section>
+
+
+
+        <section id="proyectos">
+            <h2>(4.) Proyectos finales</h2>
+            <p>El objetivo de los proyectos finales es aplicar los conocimientos adquiridos para crear aplicaciones prácticas que resuelvan problemas reales, utilizando las herramientas y conceptos de la programación orientada a objetos (POO) y otras técnicas que hayas aprendido. A continuación, se detallan dos proyectos que puedes desarrollar para poner en práctica lo aprendido: un Gestor de Notas y un Chatbot Básico.</p>
+        </section>
+
+
+
+        <section id="integracion">
+          <h2>(4.1.) Integración de conceptos en aplicaciones reales</h2>
+  
+          <h4>Gestor de Notas</h4>
+          <p>Permite crear, leer, actualizar y eliminar notas. El gestor de notas es una aplicación sencilla que te ayudará a aplicar lo aprendido sobre POO, especialmente en la creación de clases, atributos y métodos. Este proyecto utilizará una estructura básica para gestionar notas, donde cada nota tendrá un título y contenido.</p>
+  
+          <div class="code-title">Estructura del proyecto:</div>
+          <ul>
+              <li><strong>Clase Nota:</strong> Representa una nota con atributos como título y contenido.</li>
+              <li><strong>Clase GestorNotas:</strong> Permite gestionar un conjunto de notas, con métodos para agregar, eliminar, actualizar y mostrar notas.</li>
+          </ul>
+  
+          <div class="code-title">Código del proyecto:</div>
+          <pre>
+  class Nota:
+      def __init__(self, titulo, contenido):
+          self.titulo = titulo
+          self.contenido = contenido
+  
+      def mostrar_nota(self):
+          return f"Título: {self.titulo}\nContenido: {self.contenido}"
+  
+  class GestorNotas:
+      def __init__(self):
+          self.notas = []
+  
+      def crear_nota(self, titulo, contenido):
+          nueva_nota = Nota(titulo, contenido)
+          self.notas.append(nueva_nota)
+  
+      def leer_nota(self, titulo):
+          for nota in self.notas:
+              if nota.titulo == titulo:
+                  return nota.mostrar_nota()
+          return "Nota no encontrada."
+  
+      def actualizar_nota(self, titulo, nuevo_contenido):
+          for nota in self.notas:
+              if nota.titulo == titulo:
+                  nota.contenido = nuevo_contenido
+                  return "Nota actualizada."
+          return "Nota no encontrada."
+  
+      def eliminar_nota(self, titulo):
+          for nota in self.notas:
+              if nota.titulo == titulo:
+                  self.notas.remove(nota)
+                  return "Nota eliminada."
+          return "Nota no encontrada."
+  
+  # Ejemplo de uso
+  gestor = GestorNotas()
+  
+  gestor.crear_nota("Nota 1", "Contenido de la primera nota.")
+  gestor.crear_nota("Nota 2", "Contenido de la segunda nota.")
+  
+  print(gestor.leer_nota("Nota 1"))  # Leer la nota
+  gestor.actualizar_nota("Nota 1", "Contenido actualizado.")
+  print(gestor.leer_nota("Nota 1"))  # Leer la nota después de actualizarla
+  
+  gestor.eliminar_nota("Nota 2")  # Eliminar una nota
+  print(gestor.leer_nota("Nota 2"))  # Intentar leer una nota eliminada
+          </pre>
+  
+          <p><strong>Descripción del código:</strong></p>
+          <ul>
+              <li><strong>Clase Nota:</strong> Representa una nota con un título y contenido. El método <code>mostrar_nota()</code> devuelve una cadena con los datos de la nota.</li>
+              <li><strong>Clase GestorNotas:</strong> Mantiene una lista de notas y permite crear, leer, actualizar y eliminar notas. Usa una lista para almacenar las notas y métodos para interactuar con ellas.</li>
+          </ul>
+  
+          <p><strong>Posibles mejoras:</strong></p>
+          <ul>
+              <li><strong>Persistencia de datos:</strong> Guardar las notas en un archivo para que los datos no se pierdan cuando el programa se cierre.</li>
+              <li><strong>Interfaz gráfica (GUI):</strong> Usar bibliotecas como Tkinter para crear una interfaz más amigable.</li>
+          </ul>
+  
+          <h4>Chatbot Básico</h4>
+          <p>El chatbot básico es una aplicación interactiva que responde a las preguntas del usuario. En este caso, utilizaremos la Programación Orientada a Objetos para estructurar el chatbot y las bibliotecas estándar como <code>random</code> para generar respuestas aleatorias y <code>datetime</code> para dar respuestas basadas en la fecha y hora.</p>
+  
+          <div class="code-title">Estructura del proyecto:</div>
+          <ul>
+              <li><strong>Clase Chatbot:</strong> Maneja las interacciones del usuario, incluyendo la generación de respuestas basadas en las preguntas o saludos.</li>
+              <li><strong>Métodos de la clase:</strong> Métodos para responder a saludos, preguntas sobre el tiempo y otras consultas comunes.</li>
+          </ul>
+  
+          <div class="code-title">Código del proyecto:</div>
+          <pre>
+  import random
+  import datetime
+  
+  class Chatbot:
+      def __init__(self, nombre):
+          self.nombre = nombre
+  
+      def saludar(self):
+          return random.choice(["¡Hola!", "¡Buenos días!", "¡Qué tal!"])
+  
+      def responder_fecha(self):
+          hoy = datetime.datetime.now()
+          return f"Hoy es {hoy.strftime('%A, %d de %B de %Y')}."
+  
+      def responder_hora(self):
+          ahora = datetime.datetime.now()
+          return f"Son las {ahora.strftime('%H:%M:%S')}."
+  
+      def procesar_pregunta(self, pregunta):
+          if "hola" in pregunta.lower():
+              return self.saludar()
+          elif "día" in pregunta.lower() or "fecha" in pregunta.lower():
+              return self.responder_fecha()
+          elif "hora" in pregunta.lower():
+              return self.responder_hora()
+          else:
+              return "Lo siento, no entiendo esa pregunta."
+  
+  # Ejemplo de uso
+  bot = Chatbot("BotAmigo")
+  
+  # Interacciones con el chatbot
+  print(bot.procesar_pregunta("¡Hola!"))
+  print(bot.procesar_pregunta("¿Qué día es hoy?"))
+  print(bot.procesar_pregunta("¿Qué hora es?"))
+  print(bot.procesar_pregunta("¿Cómo estás?"))
+          </pre>
+  
+          <p><strong>Descripción del código:</strong></p>
+          <ul>
+              <li><strong>Clase Chatbot:</strong> Tiene un nombre y métodos para responder a preguntas comunes. Los métodos <code>saludar()</code>, <code>responder_fecha()</code> y <code>responder_hora()</code> devuelven respuestas predefinidas.</li>
+              <li><strong>Método procesar_pregunta():</strong> Toma la pregunta del usuario y responde en función de las palabras clave que contiene (por ejemplo, "hola", "hora", "día").</li>
+          </ul>
+  
+          <p><strong>Posibles mejoras:</strong></p>
+          <ul>
+              <li><strong>Respuestas más avanzadas:</strong> Incorporar más preguntas y respuestas, como preguntas sobre el clima o información personal.</li>
+              <li><strong>Interfaz de usuario:</strong> Agregar una interfaz de chat en línea usando bibliotecas como Tkinter o crear un chatbot web usando Flask.</li>
+              <li><strong>Almacenamiento de datos:</strong> Hacer que el chatbot recuerde conversaciones previas o preferencias del usuario.</li>
+          </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+
+
+    <a href="#top">
+      <button>Subir al Inicio</button>
+  </a>
+
+
+
+
+</body>
+</html>
