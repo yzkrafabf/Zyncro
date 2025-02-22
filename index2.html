@@ -1,96 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos de Python</title>
+    <title>Estructura de datos y funciones de Python</title>
     <style>
+        /* Estilos básicos */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url('python.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* La imagen cubrirá toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* La imagen no se moverá cuando se haga scroll */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden; /* Elimina el scroll */
         }
-        header {
-            background-color: #325b97;
-            color: rgb(255, 255, 255);
-            padding: 10px 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
+
+        /* Contenedor principal */
+        .content {
             padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para mejorar visibilidad */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
+
         h1 {
-            font-size: 36px;
+            font-size: 2.5em;
+            color: #4A90E2;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
-            font-size: 28px;
-            margin-top: 30px;
+            color: #4A90E2;
+            font-size: 1.1em;
+            margin-top: 15px;
+            transition: color 0.3s ease;
         }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
+
+        h2:hover {
+            color: #ff6347;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 15px;
-        }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             padding: 20px;
-            background-color: #325b97;
-            color: white;
+            box-sizing: border-box;
+        }
+
+        .image-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos de modales */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            float: right;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ff6347;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsividad */
+        @media (max-width: 1024px) {
+            .image-container {
+                width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .image-container {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
+
 <body>
+    <div class="content">
+        <h1>Estructura de datos y funciones de Python</h1>
+        <main>
+            <div class="image-container">
+                <img id="imgModalTrigger" src="7.png" alt="Imagen 7">
+                <h2>Funciones en Python</h2>
+            </div>
 
-<header>
-    <h1>Fundamentos de Python</h1>
-</header>
+            <div class="image-container">
+                <img id="videoModalTrigger" src="8.png" alt="Imagen 8">
+                <h2>Estructura de datos</h2>
+            </div>
 
-<div class="container">
-    <h2>Introducción</h2>
-    <p>Python es uno de los lenguajes de programación más populares, conocido por su simplicidad y versatilidad. Es ampliamente utilizado en áreas como desarrollo web, análisis de datos, inteligencia artificial y más.</p>
-    
-    <h2>Subtemas</h2>
-    <ul>
-        <li>
-            <h3><a href="https://www.youtube.com/watch?v=yppT6GPZMyo&t=1s" target="_blank">Sintaxis básica de Python</a></h3>
-            <p>Aprende cómo escribir tu primer código en Python, incluyendo variables, operadores y estructuras básicas.</p>
-        </li>
-        <li>
-            <h3><a href="https://www.youtube.com/watch?v=eU5L7HtwSWM" target="_blank">Condicionales y bucles</a></h3>
-            <p>Descubre cómo usar condicionales ("if", "else") y bucles ("for", "while") para controlar el flujo del programa.</p>
-        </li>
-        <li>
-            <h3><a href="https://www.youtube.com/watch?v=1U7zmcrj-QM" target="_blank">Funciones en Python</a></h3>
-            <p>Entiende cómo crear funciones para organizar y reutilizar código eficientemente.</p>
-        </li>
-        <li>
-            <h3><a href="https://www.youtube.com/watch?v=NNvodMT6GIk" target="_blank">Manejo de excepciones</a></h3>
-            <p>Aprende cómo manejar errores en tu código utilizando "try", "except" y otras herramientas para hacer tu programa más robusto.</p>
-        </li>
-    </ul>
-</div>
+            <div class="image-container">
+                <img id="thirdImageModalTrigger" src="0.png" alt="Imagen 0">
+                <h2>Manejo de errores</h2>
+            </div>
+        </main>
 
-<footer>
-    <p>&copy; 2025 Fundamentos de Python</p>
-</footer>
+        <!-- Modal para la función -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalBtn">&times;</span>
+                <p>Para definir una función en Python, se siguen los siguientes pasos:
+                    <ol>
+                        <li>Utilizar la palabra reservada <code>def</code></li>
+                        <li>Asignar un nombre a la función</li>
+                        <li>Incluir los parámetros entre paréntesis</li>
+                        <li>Terminar la cabecera de la función con dos puntos</li>
+                        <li>Escribir el cuerpo de la función, que es el conjunto de instrucciones que la conforman</li>
+                        <li>Añadir la palabra reservada <code>return</code> para devolver un resultado</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
 
+        <!-- Modal para el video de YouTube -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeVideoModalBtn">&times;</span>
+                <h2>Video de YouTube</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/v25-m1LOUiU" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Modal para el tercer video de YouTube -->
+        <div id="thirdImageModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeThirdImageModalBtn">&times;</span>
+                <h2>Video de YouTube: Manejo de Errores</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/SoZOCsW_e58" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var videoModal = document.getElementById("videoModal");
+        var thirdImageModal = document.getElementById("thirdImageModal");
+        var imgModalTrigger = document.getElementById("imgModalTrigger");
+        var videoModalTrigger = document.getElementById("videoModalTrigger");
+        var thirdImageModalTrigger = document.getElementById("thirdImageModalTrigger");
+        var closeModalBtn = document.getElementById("closeModalBtn");
+        var closeVideoModalBtn = document.getElementById("closeVideoModalBtn");
+        var closeThirdImageModalBtn = document.getElementById("closeThirdImageModalBtn");
+
+        imgModalTrigger.onclick = function () {
+            modal.style.display = "block";
+        };
+
+        videoModalTrigger.onclick = function () {
+            videoModal.style.display = "block";
+        };
+
+        thirdImageModalTrigger.onclick = function () {
+            thirdImageModal.style.display = "block";
+        };
+
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        closeVideoModalBtn.onclick = function () {
+            videoModal.style.display = "none";
+        };
+
+        closeThirdImageModalBtn.onclick = function () {
+            thirdImageModal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            } else if (event.target == videoModal) {
+                videoModal.style.display = "none";
+            } else if (event.target == thirdImageModal) {
+                thirdImageModal.style.display = "none";
+            }
+        };
+    </script>
 </body>
+
 </html>
