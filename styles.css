@@ -89,7 +89,7 @@ header a:hover{
         rgba(0, 0, 0, 0.633),
         rgba(0, 0, 0, 0.613)
     )
-    ,url("media/hero.jpg");
+    ,url("a/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -141,7 +141,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/front-end.jpg");
+    ,url("a/front-end.jpg");
 
 }
 
@@ -151,7 +151,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/full-stack.jpg");
+    ,url("a/full-stack.jpg");
 }
 
 .carta:nth-child(3){
@@ -160,7 +160,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/python.jpg");
+    ,url("a/python.jpg");
 
 }
 
@@ -251,7 +251,7 @@ footer .container{
     }
 
     #somos-proya .img-container{
-        background-image: url("media/somos-proya.jpg");
+        background-image: url("a/somos-proya.jpg");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -291,7 +291,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("media/front-end-cropped.jpg");
+        ,url("a/front-end-cropped.jpg");
 
     }
 
@@ -301,7 +301,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("media/full-stack-cropped.jpg");
+        ,url("a/full-stack-cropped.jpg");
     }
 
     .carta:nth-child(3){
@@ -310,12 +310,12 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("media/python-cropped.jpg");
+        ,url("a/python-cropped.jpg");
 
     }
 
     #caracteristicas{
-        background-image: url("media/background-2.jpeg");
+        background-image: url("a/background-2.jpeg");
         background-repeat: no-repeat;
         background-size: 450px 450px;
         background-position: calc(100vw - 550px) 90px;
@@ -360,7 +360,7 @@ footer .container{
         rgba(0, 0, 0, 0.620),
         rgba(0, 0, 0, 0.620)
     )
-    ,url("media/final.jpg");
+    ,url("a/final.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
